@@ -1,0 +1,164 @@
+.brand:hover {
+  animation: signal 380ms linear;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.45rem;
+  width: 1.4rem;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 200ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.icon-link {
+  transition: color 180ms ease;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.facts li,
+.education-list > li {
+  position: relative;
+}
+
+.facts li::before,
+.education-list > li::before {
+  content: '';
+  position: absolute;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  width: 2px;
+  background: var(--color-accent);
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 220ms ease;
+}
+
+.facts li::before {
+  left: 0;
+}
+
+.education-list > li::before {
+  left: -0.7rem;
+}
+
+.facts li {
+  transition: background-color 200ms ease;
+}
+
+.facts li:hover,
+.facts li:focus-within {
+  background: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+}
+
+.facts li:hover::before,
+.facts li:focus-within::before,
+.education-list > li:hover::before,
+.education-list > li:focus-within::before {
+  transform: scaleY(1);
+}
+
+.stack-chip {
+  transition:
+    background-color 180ms ease,
+    translate 180ms ease;
+}
+
+.stack-chip:hover,
+.stack-chip:focus-visible {
+  translate: 0 -2px;
+  background: color-mix(in srgb, var(--color-accent) 16%, var(--color-bg));
+}
+
+app-project-card {
+  display: block;
+  height: 100%;
+}
+
+.shot {
+  overflow: hidden;
+}
+
+.shot img {
+  transition: scale 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+mat-card.project-card {
+  position: relative;
+  transition: translate 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-frame {
+  position: absolute;
+  inset: 0.55rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  background:
+    linear-gradient(var(--color-accent), var(--color-accent)) left top / 32px 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) left top / 2px 32px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) right top / 32px 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) right top / 2px 32px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 32px 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 2px 32px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) right bottom / 32px 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) right bottom / 2px 32px no-repeat;
+}
+
+mat-card.project-card:hover,
+mat-card.project-card:focus-within {
+  translate: 0 -6px;
+}
+
+mat-card.project-card:hover .card-frame,
+mat-card.project-card:focus-within .card-frame {
+  opacity: 1;
+}
+
+mat-card.project-card:hover .shot img,
+mat-card.project-card:focus-within .shot img {
+  scale: 1.05;
+}
+
+.contact-list a:not([matButton]),
+.footer-text-link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 0 1px;
+  transition: background-size 220ms ease;
+}
+
+.contact-list a:not([matButton]):hover,
+.contact-list a:not([matButton]):focus-visible,
+.footer-text-link:hover,
+.footer-text-link:focus-visible {
+  background-size: 100% 1px;
+}
+
+@media (min-width: 960px) {
+  .nav-link::after {
+    left: 0.55rem;
+    bottom: 0.2rem;
+    width: calc(100% - 1.1rem);
+  }
+}
