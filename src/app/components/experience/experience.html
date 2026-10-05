@@ -5,7 +5,7 @@
     @for (job of experience; track job.company) {
       <li class="job">
         <h3>{{ job.role }}</h3>
-        <p class="job-company">
+        <div class="job-brand">
           @if (job.logo) {
             <img
               class="job-logo"
@@ -15,15 +15,20 @@
               alt=""
             />
           }
-          <span>{{ job.company }}</span>
-        </p>
-        <p class="job-meta">
-          <span>{{ job.period }}</span>
-          <span>{{ job.location }}</span>
-          @if (job.type) {
-            <span>{{ job.type }}</span>
-          }
-        </p>
+          <div class="job-identity">
+            <p class="job-company">{{ job.company }}</p>
+            <p class="job-meta">
+              <span>{{ job.period }}</span>
+              <span>{{ job.location }}</span>
+              @if (job.type) {
+                <span>{{ job.type }}</span>
+              }
+            </p>
+          </div>
+        </div>
+        @if (job.summary) {
+          <p class="job-summary">{{ job.summary }}</p>
+        }
         @if (job.note) {
           <p class="job-note">{{ job.note }}</p>
         }
