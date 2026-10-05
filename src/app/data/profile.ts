@@ -12,13 +12,13 @@ export const profile: Profile = {
   valueProp:
     'Crio interfaces web e aplicativos móveis com Angular e Ionic, da tela à integração com APIs e recursos nativos.',
   about: [
-    'Me formei em Análise e Desenvolvimento de Sistemas na UniGuairacá. Desenvolvo interfaces web com Angular, TypeScript e Angular Material, aplicativos com Ionic e Capacitor, e APIs em PHP (Laminas / Apigility) com MySQL e MariaDB.',
-    'Tenho experiência complementar em Python, C, Java e cibersegurança, além de servidores e redes. Estou fazendo o curso.dev /web, do Filipe Deschamps.',
+    'Desenvolvo interfaces web com Angular, TypeScript e Angular Material, aplicativos com Ionic e Capacitor, e APIs em PHP (Laminas / Apigility) com MySQL e MariaDB. Me formei em Análise e Desenvolvimento de Sistemas na UniGuairacá.',
+    'Tenho conhecimento em Python, C, Java e cibersegurança, além de servidores e redes. No curso.dev /web, do Filipe Deschamps, aprofundo o que uso no dia a dia.',
   ],
   facts: [
     '2+ anos de experiência',
-    'Pós-graduação em Angular (540h)',
-    'No ChatSeguro desde 2024, hoje como Pleno',
+    'Pós em Desenvolvimento Web com Angular (540h)',
+    'Desde mar/2024 no ChatSeguro, hoje como Pleno',
   ],
 };
 

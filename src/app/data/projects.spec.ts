@@ -45,10 +45,9 @@ describe('projects', () => {
     expect(readProjectFilter('Infra')).toBe('Infra');
   });
 
-  it('should build the private repository sentence', () => {
-    expect(privateRepositoryMessage('em desenvolvimento (CONFIRMAR)')).toBe(
-      'Repositório privado: em desenvolvimento (CONFIRMAR). Posso apresentar o projeto em uma reunião.',
-    );
+  it('should keep the private note to the reason itself', () => {
+    expect(privateRepositoryMessage('Em desenvolvimento')).toBe('Em desenvolvimento.');
+    expect(privateRepositoryMessage('No ar em rangopos.com.br.')).toBe('No ar em rangopos.com.br.');
   });
 
   it('should keep Resenha private with a releases link and no repository', () => {

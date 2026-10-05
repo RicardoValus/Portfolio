@@ -23,7 +23,7 @@ export const education: readonly EducationEntry[] = [
 ];
 
 export const certificates: readonly EducationEntry[] = [
-  { title: 'Introdução à HTML', institution: 'Udemy', period: 'jul/2024' },
+  { title: 'Introdução ao HTML', institution: 'Udemy', period: 'jul/2024' },
   { title: 'HTML5 na prática', institution: 'Udemy', period: 'jul/2024' },
   { title: 'Angular Material', institution: 'Cod3r', period: 'mai/2024' },
   { title: 'TypeScript', institution: 'Udemy', period: 'abr/2024' },

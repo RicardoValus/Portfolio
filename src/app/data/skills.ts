@@ -55,7 +55,7 @@ export const skillGroups: readonly SkillGroup[] = [
       tech('Proxmox', 'siProxmox'),
       textChip('Zabbix'),
       tech('Fortinet', 'siFortinet'),
-      tech('Unifi', 'siUbiquiti'),
+      tech('UniFi', 'siUbiquiti'),
       textChip('Active Directory'),
     ],
   },

@@ -105,8 +105,12 @@ mat-card.project-card {
 }
 
 .private-note {
-  color: var(--color-text-muted);
+  margin: 0;
   max-width: var(--measure);
+  color: color-mix(in srgb, var(--color-text-muted) 78%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.35;
 }
 
 .card-links {

@@ -72,7 +72,7 @@ export const projects: readonly Project[] = [
     id: 'capacitor-phone-call-notification-android',
     name: 'Phone Call Notification',
     description:
-      'Plugin Capacitor de chamada recebida e em andamento, mesmo com o app em segundo plano, com atender, recusar e espera. Versões Android e iOS.',
+      'Plugin Capacitor, em Java, para chamada recebida e em andamento no Android, mesmo com o app em segundo plano, com ações de atender, recusar e colocar em espera.',
     category: 'Mobile',
     stack: [tech('Capacitor', 'siCapacitor'), textChip('Java')],
     repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android',
@@ -106,7 +106,7 @@ export const projects: readonly Project[] = [
     id: 'resenha',
     name: 'Resenha',
     description:
-      'Chat e chamadas em grupo, com acesso por convite. Áudio, vídeo e tela vão em P2P; o Firebase faz a presença e o handshake.',
+      'Chat e chamadas em grupo, com acesso por convite. Áudio, vídeo e tela vão em P2P; o Firebase faz a presença e a sinalização.',
     category: 'Full stack',
     stack: [
       tech('Angular', 'siAngular'),
@@ -128,7 +128,7 @@ export const projects: readonly Project[] = [
     id: 'order-delivery',
     name: 'Order Delivery',
     description:
-      'App para gerenciar pedidos com CRUD, filtro e conclusão com foto, com dados no SQLite.',
+      'App para gerenciar pedidos: incluir, filtrar e concluir com foto. Os dados ficam no SQLite.',
     category: 'Mobile',
     stack: [tech('Ionic', 'siIonic'), tech('Capacitor', 'siCapacitor'), tech('SQLite', 'siSqlite')],
     repoUrl: 'https://github.com/RicardoValus/order-delivery',
@@ -170,7 +170,7 @@ export const projects: readonly Project[] = [
     id: 'tasks-project',
     name: 'Tasks Project',
     description:
-      'Usuários e tarefas com API REST e autenticação por token. Angular no front, Laminas/Apigility e Nginx no Debian 12.',
+      'Prática de arquitetura: usuários e tarefas, API REST com token, do Nginx ao Angular, no Debian 12.',
     category: 'Full stack',
     stack: [
       tech('Debian', 'siDebian'),
@@ -260,7 +260,7 @@ export const projects: readonly Project[] = [
     id: 'rango',
     name: 'Rango',
     description:
-      'Gestão de restaurante com pedidos, caixa, relatórios e entregadores. Ionic e Angular, com Firebase e PWA, no ar em rangopos.com.br.',
+      'Pedidos, caixa, relatórios e entregadores para a operação de um restaurante.',
     category: 'Mobile',
     stack: [
       tech('Ionic', 'siIonic'),
@@ -271,7 +271,7 @@ export const projects: readonly Project[] = [
     repoUrl: null,
     status: 'privado',
     isPrivate: true,
-    privateReason: 'sistema de um restaurante familiar, no ar em rangopos.com.br',
+    privateReason: 'No ar em rangopos.com.br',
     featured: false,
     visible: true,
     screenshot: screenshot('rango'),
@@ -310,5 +310,5 @@ export function gridProjects(
 }
 
 export function privateRepositoryMessage(reason: string): string {
-  return `Repositório privado: ${reason}. Posso apresentar o projeto em uma reunião.`;
+  return reason.endsWith('.') ? reason : `${reason}.`;
 }

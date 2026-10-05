@@ -276,8 +276,19 @@
 }
 
 .job-company {
-  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.35rem;
   font-weight: 600;
+}
+
+.job-logo {
+  height: 3.75rem;
+  width: auto;
+  max-width: 9rem;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .job-meta,

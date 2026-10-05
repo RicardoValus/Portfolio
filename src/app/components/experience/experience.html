@@ -5,7 +5,18 @@
     @for (job of experience; track job.company) {
       <li class="job">
         <h3>{{ job.role }}</h3>
-        <p class="job-company">{{ job.company }}</p>
+        <p class="job-company">
+          @if (job.logo) {
+            <img
+              class="job-logo"
+              [ngSrc]="job.logo.src"
+              [width]="job.logo.width"
+              [height]="job.logo.height"
+              alt=""
+            />
+          }
+          <span>{{ job.company }}</span>
+        </p>
         <p class="job-meta">
           <span>{{ job.period }}</span>
           <span>{{ job.location }}</span>
