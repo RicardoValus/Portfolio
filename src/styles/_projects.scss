@@ -121,19 +121,34 @@ mat-card.project-card {
 }
 
 .certificates-kicker {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
-.skill-groups,
-.education-list {
+.skill-groups {
   display: grid;
   gap: 1.75rem;
 }
 
-.skill-group h3,
-.education-list h3 {
+.skill-group h3 {
   margin-bottom: 0.7rem;
   font-size: 1.15rem;
+}
+
+.education-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.education-list > li {
+  min-width: 0;
+  background: var(--color-surface);
+  padding: 0.9rem 1rem;
+}
+
+.education-list h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.3;
 }
 
 .contact-list {
@@ -199,6 +214,11 @@ mat-card.project-card {
   .project-grid.is-featured {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .education-degrees,
+  .certificate-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 960px) {
@@ -238,6 +258,11 @@ mat-card.project-card {
 
   .project-grid.is-featured {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .education-degrees,
+  .certificate-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

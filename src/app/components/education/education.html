@@ -1,7 +1,7 @@
 <section class="section" id="formacao" appReveal>
   <p class="section-kicker">05</p>
   <h2 class="section-title">Formação</h2>
-  <ul class="education-list">
+  <ul class="education-list education-degrees">
     @for (entry of education; track entry.title) {
       <li>
         <h3>{{ entry.title }}</h3>
@@ -15,7 +15,7 @@
     }
   </ul>
   <p class="section-kicker certificates-kicker">Certificados</p>
-  <ul class="education-list">
+  <ul class="education-list certificate-list">
     @for (entry of certificates; track entry.title) {
       <li>
         <h3>{{ entry.title }}</h3>
