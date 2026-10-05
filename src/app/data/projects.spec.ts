@@ -9,10 +9,10 @@ import {
 } from './projects';
 
 describe('projects', () => {
-  it('should hide projects marked as not visible', () => {
+  it('should list rango among the visible projects', () => {
     const visible = projectsForFilter(projects, 'Todos');
 
-    expect(visible.map((project) => project.id)).not.toContain('rango');
+    expect(visible.map((project) => project.id)).toContain('rango');
   });
 
   it('should keep four featured projects when the filter is Todos', () => {
@@ -36,8 +36,8 @@ describe('projects', () => {
     const mobile = projectsForFilter(projects, 'Mobile').map((project) => project.id);
 
     expect(mobile).toContain('rockers');
+    expect(mobile).toContain('rango');
     expect(mobile).not.toContain('todo-app');
-    expect(mobile).not.toContain('rango');
   });
 
   it('should fall back to Todos when the chip value is empty', () => {

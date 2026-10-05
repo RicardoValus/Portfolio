@@ -40,6 +40,7 @@ export const availableScreenshots: ReadonlySet<string> = new Set<string>([
   'Synk',
   'garimpo',
   'grana',
+  'rango',
 ]);
 
 function screenshot(id: string): string {
@@ -256,7 +257,7 @@ export const projects: readonly Project[] = [
     isPrivate: true,
     privateReason: 'projeto comercial ligado a cliente (CONFIRMAR)',
     featured: false,
-    visible: false,
+    visible: true,
     screenshot: screenshot('rango'),
   },
 ];
