@@ -18,7 +18,7 @@ export const profile: Profile = {
   facts: [
     '2+ anos de experiência',
     'Pós-graduação em Angular (540h)',
-    'Desenvolvedor de software na ChatSeguro desde 2024',
+    'No ChatSeguro desde 2024, hoje como Pleno',
   ],
 };
 

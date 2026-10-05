@@ -10,15 +10,16 @@ export interface ExperienceEntry {
 
 export const experience: readonly ExperienceEntry[] = [
   {
-    role: 'Desenvolvedor de software',
+    role: 'Desenvolvedor de software Pleno',
     company: 'ChatSeguro',
     period: 'mar/2024 – atual',
     location: 'Paraná, Brasil · Remoto',
     type: 'Tempo integral',
     bullets: [
-      'Lancei a v2.4.0 com chamadas de áudio e vídeo em grupo, o recurso mais pedido pelos clientes.',
-      'Desenvolvo interfaces web com Angular, Material e TypeScript, e apps com Ionic e Capacitor.',
-      'Crio REST APIs em PHP (Laminas / Apigility) e trabalho com MySQL, MariaDB, Debian, Git, Azure DevOps e Nginx.',
+      'Nós lançamos chamadas de áudio e vídeo entre duas pessoas e, na v2.4.0, em grupo, com escolha da tela compartilhada.',
+      'Nós lançamos a tela inicial com o resumo de atividades e a lista de sessões ativas.',
+      'Nós adicionamos anexos enviados junto com a mensagem, mensagens fixadas e favoritas, formatação de texto e tema escuro.',
+      'Desenvolvo a interface em Angular, Material e TypeScript, apps com Ionic e Capacitor, e APIs em PHP (Laminas / Apigility).',
     ],
   },
   {
