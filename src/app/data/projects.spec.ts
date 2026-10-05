@@ -59,9 +59,11 @@ describe('projects', () => {
     expect(resenha?.liveUrl).toBe('https://github.com/RicardoValus/Resenha-Releases');
   });
 
-  it('should leave Synk stack as TODO', () => {
-    const synk = projects.find((project) => project.id === 'Synk');
+  it('should hide projects whose README does not describe the product', () => {
+    const visible = projectsForFilter(projects, 'Todos').map((project) => project.id);
 
-    expect(synk?.stack).toEqual([{ label: 'TODO' }]);
+    expect(visible).not.toContain('angular-webrtc');
+    expect(visible).not.toContain('BeatFlow');
+    expect(visible).not.toContain('Synk');
   });
 });

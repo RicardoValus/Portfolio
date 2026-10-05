@@ -51,11 +51,13 @@ export const projects: readonly Project[] = [
   {
     id: 'rockers',
     name: 'Rockers',
-    description: 'App de agendamento para barbearias, base do meu TCC.',
+    description:
+      'App de agendamento para barbearias: cadastro, login, agenda do cliente e painel de barbeiros e horários. Base do meu TCC.',
     category: 'Mobile',
     stack: [
       tech('Ionic', 'siIonic'),
       tech('Angular', 'siAngular'),
+      tech('Angular Material', 'siMaterialdesign'),
       tech('Capacitor', 'siCapacitor'),
       tech('Firebase', 'siFirebase'),
     ],
@@ -69,7 +71,8 @@ export const projects: readonly Project[] = [
   {
     id: 'capacitor-phone-call-notification-android',
     name: 'Phone Call Notification',
-    description: 'Plugin Capacitor que notifica chamadas recebidas mesmo com o app em background.',
+    description:
+      'Plugin Capacitor de chamada recebida e em andamento, mesmo com o app em segundo plano, com atender, recusar e espera. Versões Android e iOS.',
     category: 'Mobile',
     stack: [tech('Capacitor', 'siCapacitor'), textChip('Java')],
     repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android',
@@ -82,7 +85,8 @@ export const projects: readonly Project[] = [
   {
     id: 'todo-app',
     name: 'Todo App',
-    description: 'CRUD full stack com monorepo e servidor configurados do zero.',
+    description:
+      'Lista de tarefas em monorepo: Angular 22, API em Mezzio (PHP 8.4), MariaDB, Nginx e phpMyAdmin no Debian 13.',
     category: 'Full stack',
     stack: [
       tech('Angular', 'siAngular'),
@@ -101,20 +105,21 @@ export const projects: readonly Project[] = [
   {
     id: 'resenha',
     name: 'Resenha',
-    description: 'Chat desktop com canais de texto, voz e vídeo e comunicação P2P.',
+    description:
+      'Chat e chamadas em grupo, com acesso por convite. Áudio, vídeo e tela vão em P2P; o Firebase faz a presença e o handshake.',
     category: 'Full stack',
     stack: [
       tech('Angular', 'siAngular'),
       tech('Electron', 'siElectron'),
       tech('Angular Material', 'siMaterialdesign'),
+      tech('Firebase', 'siFirebase'),
       tech('WebRTC', 'siWebrtc'),
     ],
     repoUrl: null,
     liveUrl: 'https://github.com/RicardoValus/Resenha-Releases',
     status: 'privado',
     isPrivate: true,
-    privateReason:
-      'código-fonte privado; os instaladores estão no repositório de releases (CONFIRMAR)',
+    privateReason: 'os instaladores públicos ficam no repositório de releases',
     featured: true,
     visible: true,
     screenshot: screenshot('resenha'),
@@ -143,14 +148,15 @@ export const projects: readonly Project[] = [
     status: 'em desenvolvimento',
     isPrivate: false,
     featured: false,
-    visible: true,
+    // Hidden: the README is still the Angular CLI template and the app only runs locally.
+    visible: false,
     screenshot: screenshot('angular-webrtc'),
   },
   {
     id: 'maintenence_pro',
     name: 'maintenence_pro',
     description:
-      'Manutenção do Debian 13: apt, NVIDIA/DKMS, microcode, firmware UEFI e relatório de reboot.',
+      'Interface gráfica da manutenção diária do Debian 13: pacotes, DKMS, NVIDIA, microcode, firmware UEFI e relatório de reinício.',
     category: 'Infra',
     stack: [tech('Python', 'siPython'), tech('Bash', 'siGnubash'), tech('Debian', 'siDebian')],
     repoUrl: 'https://github.com/RicardoValus/maintenence_pro',
@@ -163,7 +169,8 @@ export const projects: readonly Project[] = [
   {
     id: 'tasks-project',
     name: 'Tasks Project',
-    description: 'Projeto full stack de infraestrutura, banco e backend, do zero no Debian 12.',
+    description:
+      'Usuários e tarefas com API REST e autenticação por token. Angular no front, Laminas/Apigility e Nginx no Debian 12.',
     category: 'Full stack',
     stack: [
       tech('Debian', 'siDebian'),
@@ -189,7 +196,8 @@ export const projects: readonly Project[] = [
     status: 'público',
     isPrivate: false,
     featured: false,
-    visible: true,
+    // Hidden: the repository has no README, only a one-line About.
+    visible: false,
     screenshot: screenshot('BeatFlow'),
   },
   {
@@ -203,24 +211,26 @@ export const projects: readonly Project[] = [
     status: 'público',
     isPrivate: false,
     featured: false,
-    visible: true,
+    // Hidden: the README is empty and the About does not list features or stack.
+    visible: false,
     screenshot: screenshot('Synk'),
   },
   {
     id: 'garimpo',
     name: 'Garimpo',
     description:
-      'Rastreador de preços de peças de computador em várias lojas, com histórico e alertas.',
+      'Rastreador Android de preços de hardware: histórico, alertas, comparação de GPU, builds de PC e backup local.',
     category: 'Mobile',
     stack: [
       tech('Ionic', 'siIonic'),
       tech('Capacitor', 'siCapacitor'),
+      tech('SQLite', 'siSqlite'),
       tech('Android', 'siAndroid'),
     ],
     repoUrl: null,
     status: 'privado',
     isPrivate: true,
-    privateReason: 'em desenvolvimento e ainda não publicado (CONFIRMAR)',
+    privateReason: 'em desenvolvimento e ainda não publicado',
     featured: false,
     visible: true,
     screenshot: screenshot('garimpo'),
@@ -229,7 +239,7 @@ export const projects: readonly Project[] = [
     id: 'grana',
     name: 'Grana',
     description:
-      'Controle financeiro offline: ganhos, despesas e valores a receber, com dados em SQLite.',
+      'Controle financeiro offline: ganhos, despesas e valores a receber, com exportação em PDF e CSV.',
     category: 'Mobile',
     stack: [
       tech('Ionic', 'siIonic'),
@@ -241,7 +251,7 @@ export const projects: readonly Project[] = [
     repoUrl: null,
     status: 'privado',
     isPrivate: true,
-    privateReason: 'em desenvolvimento (CONFIRMAR)',
+    privateReason: 'em desenvolvimento',
     featured: false,
     visible: true,
     screenshot: screenshot('grana'),
@@ -249,13 +259,19 @@ export const projects: readonly Project[] = [
   {
     id: 'rango',
     name: 'Rango',
-    description: 'Sistema de gestão para restaurante, offline-first.',
+    description:
+      'Gestão de restaurante com pedidos, caixa, relatórios e entregadores. Ionic e Angular, com Firebase e PWA, no ar em rangopos.com.br.',
     category: 'Mobile',
-    stack: [],
+    stack: [
+      tech('Ionic', 'siIonic'),
+      tech('Angular', 'siAngular'),
+      tech('Firebase', 'siFirebase'),
+      tech('Capacitor', 'siCapacitor'),
+    ],
     repoUrl: null,
     status: 'privado',
     isPrivate: true,
-    privateReason: 'projeto comercial ligado a cliente (CONFIRMAR)',
+    privateReason: 'sistema de um restaurante familiar, no ar em rangopos.com.br',
     featured: false,
     visible: true,
     screenshot: screenshot('rango'),
