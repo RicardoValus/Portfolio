@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ricardo-medlo-valus-3yut.vercel.app/sitemap.xml

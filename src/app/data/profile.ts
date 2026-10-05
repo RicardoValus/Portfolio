@@ -22,6 +22,6 @@ export const profile: Profile = {
   ],
 };
 
-export const hasProfilePhoto = false;
+export const hasProfilePhoto = true;
 export const profilePhotoUrl = '/assets/profile.webp';
-export const profilePhotoSize = 160;
+export const profilePhotoSize = 400;

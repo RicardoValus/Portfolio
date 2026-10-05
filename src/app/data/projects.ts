@@ -27,7 +27,20 @@ export interface Project {
 export const shotWidth = 800;
 export const shotHeight = 500;
 
-export const availableScreenshots: ReadonlySet<string> = new Set<string>();
+export const availableScreenshots: ReadonlySet<string> = new Set<string>([
+  'rockers',
+  'capacitor-phone-call-notification-android',
+  'todo-app',
+  'resenha',
+  'order-delivery',
+  'angular-webrtc',
+  'maintenence_pro',
+  'tasks-project',
+  'BeatFlow',
+  'Synk',
+  'garimpo',
+  'grana',
+]);
 
 function screenshot(id: string): string {
   return `/assets/projects/${id}.webp`;

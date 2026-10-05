@@ -36,7 +36,7 @@ Coloque os arquivos em `public/`:
 
 - `public/assets/projects/<id>.webp` — uma imagem por `id` de `projects.ts`
 - `public/assets/curriculo-ricardo-medlo-valus.pdf` — o link "Baixar currículo" já aponta para esse caminho
-- `public/assets/profile.webp` — opcional, 160×160. Sem o arquivo, a seção Sobre mostra o monograma RMV
+- `public/assets/profile.webp` — foto quadrada da seção Sobre. Sem o arquivo, ou com `hasProfilePhoto` em `false` em `profile.ts`, a seção mostra o monograma RMV
 - `public/assets/og-image.png` — 1200×630, usada no Open Graph
 
 Enquanto o screenshot não existe, o card mostra um painel com o nome do projeto. Depois de salvar o `.webp`, inclua o `id` em `availableScreenshots` no mesmo `projects.ts`.
@@ -48,7 +48,9 @@ Enquanto o screenshot não existe, o card mostra um painel com o nome do projeto
 3. Build command: `npm run build`.
 4. Output directory: `dist/portfolio/browser`.
 5. Não é necessário `vercel.json`: o build já prerenderiza `/` em HTML estático.
-6. A URL canônica atual é `https://ricardo-medlo-valus-3yut.vercel.app`. Se o domínio de produção mudar, atualize os dois lugares:
+6. A URL canônica atual é `https://ricardo-medlo-valus-3yut.vercel.app`. Se o domínio de produção mudar, atualize:
    - `siteUrl` em `src/app/data/site.config.ts`
-   - `canonical`, `og:url`, `og:image` e `twitter:image` em `src/index.html`
-7. Faça um novo deploy. Para atualizar a prévia do LinkedIn, use o [Post Inspector](https://www.linkedin.com/post-inspector/). O WhatsApp também lê essas meta tags do HTML prerenderizado; se a prévia antiga continuar, reenvie o link depois do deploy.
+   - `canonical`, `og:url`, `og:image`, `twitter:image` e o JSON-LD em `src/index.html`
+   - a URL em `public/robots.txt` e `public/sitemap.xml`
+7. No Google Search Console, adicione o domínio e envie o sitemap. O HTML de `/` já sai prerenderizado, que é o que o Google lê.
+8. Faça um novo deploy. Para atualizar a prévia do LinkedIn, use o [Post Inspector](https://www.linkedin.com/post-inspector/). O WhatsApp também lê essas meta tags do HTML prerenderizado; se a prévia antiga continuar, reenvie o link depois do deploy.

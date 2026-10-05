@@ -195,6 +195,7 @@
   height: 7.5rem;
   display: grid;
   place-items: center;
+  border-radius: 12px;
   background: var(--color-surface);
   color: var(--color-text);
   font-family: var(--font-mono);
@@ -208,6 +209,7 @@
   height: 7.5rem;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
 .about-copy {
