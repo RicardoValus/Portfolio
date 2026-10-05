@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { education } from '../../data/education';
+import { certificates, education } from '../../data/education';
 
 @Component({
   selector: 'app-education',
@@ -8,4 +8,5 @@ import { education } from '../../data/education';
 })
 export class Education {
   protected readonly education = education;
+  protected readonly certificates = certificates;
 }

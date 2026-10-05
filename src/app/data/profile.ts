@@ -1,5 +1,6 @@
 export interface Profile {
   headline: string;
+  location: string;
   valueProp: string;
   about: readonly [string, string];
   facts: readonly [string, string, string];
@@ -7,11 +8,12 @@ export interface Profile {
 
 export const profile: Profile = {
   headline: 'Desenvolvedor Angular & Ionic · Web e Mobile',
+  location: 'Guarapuava, Paraná, Brasil',
   valueProp:
     'Crio interfaces web e aplicativos móveis com Angular e Ionic, da tela à integração com APIs e recursos nativos.',
   about: [
-    'Sou desenvolvedor web e mobile. Trabalho com Angular, TypeScript e Angular Material para criar interfaces responsivas, e com Ionic e Capacitor para levar esses projetos ao celular.',
-    'Antes de focar em desenvolvimento, atuei com suporte técnico, servidores e redes. Essa base ajuda na hora de integrar APIs, publicar aplicações e entender o ambiente onde elas rodam.',
+    'Me formei em Análise e Desenvolvimento de Sistemas na UniGuairacá. Desenvolvo interfaces web com Angular, TypeScript e Angular Material, aplicativos com Ionic e Capacitor, e APIs em PHP (Laminas / Apigility) com MySQL e MariaDB.',
+    'Tenho experiência complementar em Python, C, Java e cibersegurança, além de servidores e redes. Estou fazendo o curso.dev /web, do Filipe Deschamps.',
   ],
   facts: [
     '2+ anos de experiência',

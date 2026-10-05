@@ -35,7 +35,7 @@ export const skillGroups: readonly SkillGroup[] = [
     id: 'backend',
     label: 'Back-end',
     items: [
-      tech('PHP (Laminas, Mezzio)', 'siPhp'),
+      tech('PHP (Laminas, Apigility)', 'siPhp'),
       textChip('REST APIs'),
       tech('MySQL', 'siMysql'),
       tech('MariaDB', 'siMariadb'),

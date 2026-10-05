@@ -1,6 +1,7 @@
 export interface SiteConfig {
   name: string;
   contactEmail: string;
+  whatsappUrl: string;
   linkedin: string;
   github: string;
   cvUrl: string;
@@ -10,10 +11,11 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: 'Ricardo Medlo Valus',
   contactEmail: 'ricardovalus.dev@gmail.com',
+  whatsappUrl: 'https://wa.me/5542999763806',
   linkedin: 'https://www.linkedin.com/in/ricardo-medlo-valus-a35429215',
   github: 'https://github.com/RicardoValus',
   cvUrl: '/assets/curriculo-ricardo-medlo-valus.pdf',
-  siteUrl: 'https://TODO-SEU-DOMINIO.vercel.app',
+  siteUrl: 'https://ricardo-medlo-valus-3yut.vercel.app',
 };
 
 export const navItems = [

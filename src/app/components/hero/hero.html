@@ -2,10 +2,19 @@
   <div class="accent-rule" aria-hidden="true"></div>
   <h1 class="hero-title">{{ site.name }}</h1>
   <p class="hero-headline">{{ profile.headline }}</p>
+  <p class="hero-location">{{ profile.location }}</p>
   <p class="hero-lead">{{ profile.valueProp }}</p>
   <div class="hero-actions">
     <a matButton="filled" href="#projetos">Ver projetos</a>
     <a matButton="outlined" [href]="site.cvUrl" download>Baixar currículo</a>
-    <a matButton="outlined" [href]="mailto">Falar comigo</a>
+    <button matButton="outlined" type="button" [matMenuTriggerFor]="contactMenu">
+      Falar comigo
+    </button>
+    <mat-menu #contactMenu="matMenu" yPosition="below">
+      <a mat-menu-item [href]="site.whatsappUrl" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+      <a mat-menu-item [href]="mailto">E-mail</a>
+    </mat-menu>
   </div>
 </section>

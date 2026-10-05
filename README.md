@@ -18,12 +18,12 @@ Tudo que aparece na página sai de `src/app/data/`:
 
 | Arquivo | O que controla |
 | --- | --- |
-| `site.config.ts` | Nome, e-mail, LinkedIn, GitHub, caminho do currículo e URL canônica |
+| `site.config.ts` | Nome, e-mail, WhatsApp, LinkedIn, GitHub, caminho do currículo e URL canônica |
 | `profile.ts` | Headline, proposta de valor, textos do Sobre e os três fatos |
 | `experience.ts` | Linha do tempo |
 | `projects.ts` | Projetos, filtros, destaque e motivo de repositório privado |
 | `skills.ts` | Grupos da seção Stack |
-| `education.ts` | Formação |
+| `education.ts` | Formação e certificados |
 | `tech-icons.ts` | Ícones do simple-icons e chips de texto |
 
 Para incluir um projeto, acrescente um objeto em `projects` com `id`, `name`, `description`, `category` (`Web`, `Mobile`, `Full stack` ou `Infra`), `stack`, `repoUrl`, `status`, `isPrivate`, `featured`, `visible` e `screenshot`. Use `tech('Angular', 'siAngular')` quando existir ícone e `textChip('Nome')` quando não existir. Projeto privado: `isPrivate: true`, `repoUrl: null` e `privateReason` com o texto que deve aparecer no card. O card mostra exatamente: `Repositório privado: {motivo}. Posso apresentar o projeto em uma reunião.` Com `visible: false` o item continua no arquivo e não entra na página.
@@ -48,7 +48,7 @@ Enquanto o screenshot não existe, o card mostra um painel com o nome do projeto
 3. Build command: `npm run build`.
 4. Output directory: `dist/portfolio/browser`.
 5. Não é necessário `vercel.json`: o build já prerenderiza `/` em HTML estático.
-6. Depois do domínio de produção, atualize a URL nos dois lugares:
+6. A URL canônica atual é `https://ricardo-medlo-valus-3yut.vercel.app`. Se o domínio de produção mudar, atualize os dois lugares:
    - `siteUrl` em `src/app/data/site.config.ts`
    - `canonical`, `og:url`, `og:image` e `twitter:image` em `src/index.html`
 7. Faça um novo deploy. Para atualizar a prévia do LinkedIn, use o [Post Inspector](https://www.linkedin.com/post-inspector/). O WhatsApp também lê essas meta tags do HTML prerenderizado; se a prévia antiga continuar, reenvie o link depois do deploy.
