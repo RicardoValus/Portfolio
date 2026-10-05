@@ -9,11 +9,13 @@ import {
   shotWidth,
   type Project,
 } from '../../data/projects';
+import { Reveal } from '../../reveal';
 import { StackChip } from '../stack-chip/stack-chip';
 
 @Component({
   selector: 'app-project-card',
   imports: [MatCard, MatCardContent, MatCardActions, MatButton, NgOptimizedImage, StackChip],
+  hostDirectives: [Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './project-card.html',
 })

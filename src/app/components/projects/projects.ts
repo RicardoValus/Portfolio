@@ -8,11 +8,12 @@ import {
   readProjectFilter,
   type ProjectFilter,
 } from '../../data/projects';
+import { Reveal } from '../../reveal';
 import { ProjectCard } from '../project-card/project-card';
 
 @Component({
   selector: 'app-projects',
-  imports: [MatChipListbox, MatChipOption, ProjectCard],
+  imports: [MatChipListbox, MatChipOption, ProjectCard, Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './projects.html',
 })

@@ -2,10 +2,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { hasProfilePhoto, profile, profilePhotoSize, profilePhotoUrl } from '../../data/profile';
 import { siteConfig } from '../../data/site.config';
+import { Reveal } from '../../reveal';
 
 @Component({
   selector: 'app-about',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, Reveal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './about.html',
 })
