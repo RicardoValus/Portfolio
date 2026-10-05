@@ -1,0 +1,29 @@
+<section class="section" id="sobre">
+  <p class="section-kicker">01</p>
+  <h2 class="section-title">Sobre</h2>
+  <div class="about-layout">
+    @if (hasProfilePhoto) {
+      <img
+        class="profile-photo"
+        [ngSrc]="profilePhotoUrl"
+        [width]="profilePhotoSize"
+        [height]="profilePhotoSize"
+        [alt]="siteName"
+      />
+    } @else {
+      <div class="monogram" aria-hidden="true">RMV</div>
+    }
+    <div>
+      <div class="about-copy">
+        @for (paragraph of profile.about; track paragraph) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+      <ul class="facts">
+        @for (fact of profile.facts; track fact) {
+          <li>{{ fact }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

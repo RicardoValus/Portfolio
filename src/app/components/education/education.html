@@ -1,0 +1,15 @@
+<section class="section" id="formacao">
+  <p class="section-kicker">05</p>
+  <h2 class="section-title">Formação</h2>
+  <ul class="education-list">
+    @for (entry of education; track entry.title) {
+      <li>
+        <h3>{{ entry.title }}</h3>
+        <p class="job-meta">
+          <span>{{ entry.institution }}</span>
+          <span>{{ entry.year }}</span>
+        </p>
+      </li>
+    }
+  </ul>
+</section>

@@ -1,0 +1,42 @@
+<mat-card class="project-card" appearance="outlined">
+  <div class="shot">
+    @if (showScreenshot()) {
+      <img [ngSrc]="project().screenshot" [width]="shotWidth" [height]="shotHeight" alt="" />
+    } @else {
+      <div class="shot-fallback" aria-hidden="true">
+        <span>{{ project().name }}</span>
+      </div>
+    }
+  </div>
+  <mat-card-content class="card-body">
+    @if (project().isPrivate) {
+      <span class="badge">Privado</span>
+    }
+    <h3>{{ project().name }}</h3>
+    <p class="card-copy">{{ project().description }}</p>
+    @if (project().stack.length > 0) {
+      <ul class="stack-list">
+        @for (item of project().stack; track item.label) {
+          <li>
+            <app-stack-chip [item]="item" />
+          </li>
+        }
+      </ul>
+    }
+    @if (project().isPrivate && project().privateReason; as reason) {
+      <p class="private-note">{{ privateMessage(reason) }}</p>
+    }
+    <mat-card-actions class="card-links">
+      @if (!project().isPrivate && project().repoUrl; as repoUrl) {
+        <a matButton="outlined" [href]="repoUrl" target="_blank" rel="noopener noreferrer">
+          Repositório
+        </a>
+      }
+      @if (project().liveUrl; as liveUrl) {
+        <a matButton="outlined" [href]="liveUrl" target="_blank" rel="noopener noreferrer">
+          Releases
+        </a>
+      }
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

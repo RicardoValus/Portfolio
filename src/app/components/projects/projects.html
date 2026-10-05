@@ -1,0 +1,32 @@
+<section class="section" id="projetos">
+  <p class="section-kicker">03</p>
+  <h2 class="section-title">Projetos</h2>
+  <mat-chip-listbox
+    class="filters"
+    aria-label="Filtrar projetos"
+    hideSingleSelectionIndicator
+    [value]="activeFilter()"
+    (change)="onFilterChange($event)"
+  >
+    @for (filter of filters; track filter) {
+      <mat-chip-option [value]="filter">{{ filter }}</mat-chip-option>
+    }
+  </mat-chip-listbox>
+  @if (featured().length > 0) {
+    <div class="project-grid is-featured">
+      @for (project of featured(); track project.id) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  }
+  @if (grid().length > 0) {
+    <div class="project-grid">
+      @for (project of grid(); track project.id) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  }
+  @if (featured().length === 0 && grid().length === 0) {
+    <p class="empty-filter measure">Nenhum projeto nesta categoria.</p>
+  }
+</section>

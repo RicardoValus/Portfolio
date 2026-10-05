@@ -1,0 +1,123 @@
+@use '@angular/material' as mat;
+@use './tokens' as tokens;
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-latin-500.woff2') format('woff2');
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$red-palette,
+        tertiary: mat.$red-palette,
+      ),
+      typography: (
+        plain-family: (
+          'Inter',
+          'Segoe UI',
+          sans-serif,
+        ),
+        brand-family: (
+          'Inter',
+          'Segoe UI',
+          sans-serif,
+        ),
+        bold-weight: 600,
+        medium-weight: 500,
+        regular-weight: 400,
+      ),
+      density: 0,
+    )
+  );
+  @include mat.theme-overrides(
+    (
+      background: tokens.$color-bg,
+      on-background: tokens.$color-text,
+      surface: tokens.$color-surface,
+      surface-dim: tokens.$color-bg,
+      surface-bright: tokens.$color-surface,
+      surface-container-lowest: tokens.$color-bg,
+      surface-container-low: tokens.$color-surface,
+      surface-container: tokens.$color-surface,
+      surface-container-high: tokens.$color-surface,
+      surface-container-highest: tokens.$color-surface,
+      surface-variant: tokens.$color-surface,
+      surface-tint: tokens.$color-surface,
+      on-surface: tokens.$color-text,
+      on-surface-variant: tokens.$color-text-muted,
+      inverse-surface: tokens.$color-text,
+      inverse-on-surface: tokens.$color-bg,
+      inverse-primary: tokens.$color-accent,
+      outline: tokens.$color-text-muted,
+      outline-variant: tokens.$color-text-muted,
+      primary: tokens.$color-accent,
+      on-primary: tokens.$color-on-accent,
+      primary-container: tokens.$color-accent,
+      on-primary-container: tokens.$color-on-accent,
+      primary-fixed: tokens.$color-accent,
+      primary-fixed-dim: tokens.$color-accent,
+      on-primary-fixed: tokens.$color-on-accent,
+      on-primary-fixed-variant: tokens.$color-on-accent,
+      secondary: tokens.$color-accent,
+      on-secondary: tokens.$color-on-accent,
+      secondary-container: tokens.$color-surface,
+      on-secondary-container: tokens.$color-text,
+      secondary-fixed: tokens.$color-surface,
+      secondary-fixed-dim: tokens.$color-surface,
+      on-secondary-fixed: tokens.$color-text,
+      on-secondary-fixed-variant: tokens.$color-text,
+      tertiary: tokens.$color-accent,
+      on-tertiary: tokens.$color-on-accent,
+      tertiary-container: tokens.$color-surface,
+      on-tertiary-container: tokens.$color-text,
+      tertiary-fixed: tokens.$color-surface,
+      tertiary-fixed-dim: tokens.$color-surface,
+      on-tertiary-fixed: tokens.$color-text,
+      on-tertiary-fixed-variant: tokens.$color-text,
+      error: tokens.$color-accent,
+      on-error: tokens.$color-on-accent,
+      error-container: tokens.$color-surface,
+      on-error-container: tokens.$color-text,
+      scrim: tokens.$color-bg,
+      shadow: tokens.$color-bg,
+    )
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a.mat-mdc-outlined-button,
+button.mat-mdc-outlined-button {
+  --mat-button-outlined-outline-color: var(--color-accent);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-ring, 2px solid var(--color-accent));
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 60;
+  transform: translateY(-160%);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+main {
+  display: block;
+  padding-top: var(--header-height);
+}
+
+#conteudo:focus {
+  outline: none;
+}
+
+#topo,
+#sobre,
+#experiencia,
+#projetos,
+#stack,
+#formacao,
+#contato {
+  scroll-margin-top: calc(var(--header-height) + 0.5rem);
+}

@@ -1,0 +1,21 @@
+$color-bg: #0f1115;
+$color-surface: #1a1d24;
+$color-text: #e8e6e3;
+$color-text-muted: #9aa0a6;
+$color-accent: #ff5a5f;
+$color-on-accent: #0f1115;
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-text: #{$color-text};
+  --color-text-muted: #{$color-text-muted};
+  --color-accent: #{$color-accent};
+  --color-on-accent: #{$color-on-accent};
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --header-height: 4.25rem;
+  --measure: 65ch;
+  --page-width: 72rem;
+  --space-section: clamp(3.5rem, 7vw, 5.5rem);
+}

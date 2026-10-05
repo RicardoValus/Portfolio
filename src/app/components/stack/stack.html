@@ -1,0 +1,18 @@
+<section class="section" id="stack">
+  <p class="section-kicker">04</p>
+  <h2 class="section-title">Stack</h2>
+  <div class="skill-groups">
+    @for (group of groups; track group.id) {
+      <section class="skill-group" [attr.aria-label]="group.label">
+        <h3>{{ group.label }}</h3>
+        <ul class="stack-list">
+          @for (item of group.items; track item.label) {
+            <li>
+              <app-stack-chip [item]="item" />
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  </div>
+</section>

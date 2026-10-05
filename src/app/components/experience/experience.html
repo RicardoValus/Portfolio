@@ -1,0 +1,27 @@
+<section class="section" id="experiencia">
+  <p class="section-kicker">02</p>
+  <h2 class="section-title">Experiência</h2>
+  <ol class="timeline">
+    @for (job of experience; track job.company) {
+      <li class="job">
+        <h3>{{ job.role }}</h3>
+        <p class="job-company">{{ job.company }}</p>
+        <p class="job-meta">
+          <span>{{ job.period }}</span>
+          <span>{{ job.location }}</span>
+          @if (job.type) {
+            <span>{{ job.type }}</span>
+          }
+        </p>
+        @if (job.note) {
+          <p class="job-note">{{ job.note }}</p>
+        }
+        <ul>
+          @for (bullet of job.bullets; track bullet) {
+            <li>{{ bullet }}</li>
+          }
+        </ul>
+      </li>
+    }
+  </ol>
+</section>

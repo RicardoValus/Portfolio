@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="footer-bar">
+    <div class="footer-links">
+      <a class="footer-text-link" [href]="mailto">{{ site.contactEmail }}</a>
+      <a
+        class="icon-link"
+        [href]="site.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <span aria-hidden="true">in</span>
+      </a>
+      <a
+        class="icon-link"
+        [href]="site.github"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <app-icon name="siGithub"></app-icon>
+      </a>
+      <a class="footer-text-link" [href]="site.cvUrl" download>Baixar currículo</a>
+    </div>
+    <p class="copyright">© {{ year }} {{ site.name }}</p>
+  </div>
+</footer>

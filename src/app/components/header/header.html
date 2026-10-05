@@ -1,0 +1,45 @@
+<header class="site-header">
+  <div class="header-bar">
+    <a class="brand" href="#topo">RMV</a>
+    <button
+      #menuButton
+      type="button"
+      class="menu-toggle"
+      aria-controls="site-nav"
+      [attr.aria-expanded]="isMenuOpen()"
+      [attr.aria-label]="isMenuOpen() ? 'Fechar menu' : 'Abrir menu'"
+      (click)="toggleMenu()"
+    >
+      <span class="bars" [class.is-open]="isMenuOpen()" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <nav id="site-nav" class="site-nav" [class.is-open]="isMenuOpen()" aria-label="Seções">
+      @for (item of navItems; track item.id) {
+        <a class="nav-link" [href]="'#' + item.id" (click)="closeMenu()">{{ item.label }}</a>
+      }
+      <a
+        class="icon-link"
+        [href]="site.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        (click)="closeMenu()"
+      >
+        <span aria-hidden="true">in</span>
+      </a>
+      <a
+        class="icon-link"
+        [href]="site.github"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        (click)="closeMenu()"
+      >
+        <app-icon name="siGithub"></app-icon>
+      </a>
+    </nav>
+  </div>
+</header>
