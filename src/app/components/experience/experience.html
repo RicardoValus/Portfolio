@@ -4,7 +4,9 @@
   <ol class="timeline">
     @for (job of experience; track job.company) {
       <li class="job">
-        <h3>{{ job.role }}</h3>
+        @if (job.roles.length === 1) {
+          <h3>{{ job.roles[0].title }}</h3>
+        }
         <div class="job-brand">
           @if (job.logo) {
             <img
@@ -18,10 +20,12 @@
           <div class="job-identity">
             <p class="job-company">{{ job.company }}</p>
             <p class="job-meta">
-              <span>{{ job.period }}</span>
+              @if (job.roles.length === 1) {
+                <span>{{ job.roles[0].period }}</span>
+              }
               <span>{{ job.location }}</span>
-              @if (job.type) {
-                <span>{{ job.type }}</span>
+              @if (job.roles.length === 1 && job.roles[0].type) {
+                <span>{{ job.roles[0].type }}</span>
               }
             </p>
           </div>
@@ -29,14 +33,36 @@
         @if (job.summary) {
           <p class="job-summary">{{ job.summary }}</p>
         }
-        @if (job.note) {
-          <p class="job-note">{{ job.note }}</p>
-        }
-        <ul>
-          @for (bullet of job.bullets; track bullet) {
-            <li>{{ bullet }}</li>
+        @if (job.roles.length === 1) {
+          @if (job.roles[0].bullets.length > 0) {
+            <ul>
+              @for (bullet of job.roles[0].bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
           }
-        </ul>
+        } @else {
+          <div class="job-roles">
+            @for (role of job.roles; track role.period) {
+              <div class="job-role">
+                <h3>{{ role.title }}</h3>
+                <p class="job-meta">
+                  <span>{{ role.period }}</span>
+                  @if (role.type) {
+                    <span>{{ role.type }}</span>
+                  }
+                </p>
+                @if (role.bullets.length > 0) {
+                  <ul>
+                    @for (bullet of role.bullets; track bullet) {
+                      <li>{{ bullet }}</li>
+                    }
+                  </ul>
+                }
+              </div>
+            }
+          </div>
+        }
       </li>
     }
   </ol>

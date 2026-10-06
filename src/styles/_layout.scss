@@ -284,6 +284,25 @@
   margin-top: 0.85rem;
 }
 
+.job-brand:first-child {
+  margin-top: 0;
+}
+
+.job-roles {
+  display: grid;
+  gap: 1.15rem;
+  margin-top: 1.15rem;
+}
+
+.job-role + .job-role {
+  padding-top: 1.15rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+
+.job-role h3 {
+  font-size: 1.05rem;
+}
+
 .job-logo {
   width: 8.75rem;
   height: 4.25rem;
