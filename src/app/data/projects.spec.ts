@@ -21,7 +21,7 @@ describe('projects', () => {
     expect(featuredProjects(projects, 'Todos').map((project) => project.id)).toEqual([
       'rockers',
       'capacitor-phone-call-notification-android',
-      'todo-app',
+      'meet-seguro',
       'resenha',
     ]);
   });
@@ -51,7 +51,11 @@ describe('projects', () => {
     expect(meet.access).toBe('private');
     expect(meet.repoUrl).toBeNull();
     expect(meet.links).toEqual([{ label: 'Ver site', href: 'https://meetseguro.com.br/login' }]);
-    expect(gridProjects(projects, 'Todos').map((project) => project.id)).toContain('meet-seguro');
+    expect(meet.featured).toBe(true);
+    expect(featuredProjects(projects, 'Todos').map((project) => project.id)).toContain(
+      'meet-seguro',
+    );
+    expect(gridProjects(projects, 'Todos').map((project) => project.id)).toContain('todo-app');
   });
 
   it('should filter by category', () => {
