@@ -2,10 +2,12 @@ import { describe, expect, it } from 'vitest';
 import {
   featuredProjects,
   gridProjects,
-  privateRepositoryMessage,
+  projectBadges,
+  projectLinks,
   projects,
   projectsForFilter,
   readProjectFilter,
+  visibleProjectCount,
 } from './projects';
 
 describe('projects', () => {
@@ -28,8 +30,14 @@ describe('projects', () => {
     const gridIds = gridProjects(projects, 'Todos').map((project) => project.id);
 
     expect(gridIds).not.toContain('rockers');
-    expect(gridIds).toContain('order-delivery');
+    expect(gridIds).not.toContain('order-delivery');
     expect(gridIds).toContain('garimpo');
+    expect(gridIds).toContain('tasks-project');
+  });
+
+  it('should count the visible projects after Order Delivery is gone', () => {
+    expect(projects.some((project) => project.id === 'order-delivery')).toBe(false);
+    expect(visibleProjectCount(projects)).toBe(9);
   });
 
   it('should filter by category', () => {
@@ -45,17 +53,33 @@ describe('projects', () => {
     expect(readProjectFilter('Infra')).toBe('Infra');
   });
 
-  it('should keep the private note to the reason itself', () => {
-    expect(privateRepositoryMessage('Em desenvolvimento')).toBe('Em desenvolvimento.');
-    expect(privateRepositoryMessage('No ar em rangopos.com.br.')).toBe('No ar em rangopos.com.br.');
+  it('should keep Resenha private, on the air, with app and installer links', () => {
+    const resenha = projects.find((project) => project.id === 'resenha');
+    if (!resenha) {
+      throw new Error('Resenha ausente');
+    }
+
+    expect(resenha.access).toBe('private');
+    expect(resenha.lifecycle).toBe('live');
+    expect(resenha.repoUrl).toBeNull();
+    expect(projectLinks(resenha).map((link) => link.href)).toEqual([
+      'https://resenha-c9174.web.app',
+      'https://github.com/RicardoValus/Resenha-Releases/releases',
+    ]);
   });
 
-  it('should keep Resenha private with a releases link and no repository', () => {
-    const resenha = projects.find((project) => project.id === 'resenha');
+  it('should leave Tasks Project without badges and keep its repository link', () => {
+    const tasks = projects.find((project) => project.id === 'tasks-project');
+    if (!tasks) {
+      throw new Error('Tasks Project ausente');
+    }
 
-    expect(resenha?.isPrivate).toBe(true);
-    expect(resenha?.repoUrl).toBeNull();
-    expect(resenha?.liveUrl).toBe('https://github.com/RicardoValus/Resenha-Releases');
+    expect(tasks.lifecycle).toBeUndefined();
+    expect(tasks.access).toBeUndefined();
+    expect(projectBadges(tasks)).toEqual([]);
+    expect(projectLinks(tasks)).toEqual([
+      { label: 'Ver código', href: 'https://github.com/RicardoValus/tasks-project' },
+    ]);
   });
 
   it('should hide projects whose README does not describe the product', () => {

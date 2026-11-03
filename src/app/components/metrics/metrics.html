@@ -1,0 +1,19 @@
+<section class="metrics" aria-label="Números" appReveal>
+  <ul class="metrics-list">
+    @for (metric of metrics; track metric.label) {
+      <li>
+        @if (metric.href; as href) {
+          <a class="metric" [href]="href" target="_blank" rel="noopener noreferrer">
+            <span class="metric-value">{{ metric.value }}</span>
+            <span class="metric-label">{{ metric.label }}</span>
+          </a>
+        } @else {
+          <div class="metric">
+            <span class="metric-value">{{ metric.value }}</span>
+            <span class="metric-label">{{ metric.label }}</span>
+          </div>
+        }
+      </li>
+    }
+  </ul>
+</section>

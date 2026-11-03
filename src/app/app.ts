@@ -14,12 +14,13 @@ import { Experience } from './components/experience/experience';
 import { Footer } from './components/footer/footer';
 import { Header } from './components/header/header';
 import { Hero } from './components/hero/hero';
+import { Metrics } from './components/metrics/metrics';
 import { Projects } from './components/projects/projects';
 import { Stack } from './components/stack/stack';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Hero, About, Experience, Projects, Stack, Education, Contact, Footer],
+  imports: [Header, Hero, Metrics, About, Experience, Projects, Stack, Education, Contact, Footer],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
   styleUrl: './app.scss',

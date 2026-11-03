@@ -33,7 +33,7 @@ O que aparece na página está em `src/app/data/`:
 - `education.ts` — formação e certificados
 - `tech-icons.ts` — ícone do simple-icons, ou só o nome quando não tem
 
-Projeto novo: copio um que já existe e troco os campos. Privado fica com `isPrivate: true`, `repoUrl: null` e o motivo em `privateReason`. Se ainda não quero na página, `visible: false`.
+Projeto novo: copio um que já existe e troco os campos. Selos opcionais: `lifecycle` (`live`, `in-development`, `completed`) e `access` (`open-source`, `private`). Links ficam em `links` e só aparecem quando a URL existe. Sem `links`, o card usa `repoUrl` com o texto "Ver código". Se ainda não quero na página, `visible: false`.
 
 A imagem do card é `public/assets/projects/<id>.webp`. Salvei o arquivo, incluo o `id` em `availableScreenshots`. Sem isso o card mostra só o nome.
 

@@ -67,14 +67,47 @@ mat-card.project-card {
   flex: 1;
 }
 
-.badge {
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   align-self: flex-start;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  padding: 0.15rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--color-text) 18%, transparent);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+.project-badge svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  fill: currentColor;
+}
+
+.status-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  flex: 0 0 auto;
+}
+
+.project-badge[data-kind='live'] .status-dot {
+  background: #3dcc7a;
+}
+
+.project-badge[data-kind='in-development'] .status-dot {
+  background: #e0a84a;
 }
 
 .card-copy {
@@ -104,20 +137,25 @@ mat-card.project-card {
   font-size: 0.9rem;
 }
 
-.private-note {
-  margin: 0;
-  max-width: var(--measure);
-  color: color-mix(in srgb, var(--color-text-muted) 78%, transparent);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  line-height: 1.35;
-}
-
 .card-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.35rem 0.9rem;
   margin-top: auto;
+}
+
+.card-links a {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 28%, transparent);
+}
+
+.card-links a:hover,
+.card-links a:focus-visible {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .certificates-kicker {
@@ -200,6 +238,10 @@ mat-card.project-card {
 }
 
 @media (min-width: 800px) {
+  .metrics-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .about-layout {
     grid-template-columns: auto 1fr;
     align-items: start;

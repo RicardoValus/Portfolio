@@ -23,14 +23,10 @@ export const education: readonly EducationEntry[] = [
 ];
 
 export const certificates: readonly EducationEntry[] = [
-  { title: 'Introdução ao HTML', institution: 'Udemy', period: 'jul/2024' },
-  { title: 'HTML5 na prática', institution: 'Udemy', period: 'jul/2024' },
   { title: 'Angular Material', institution: 'Cod3r', period: 'mai/2024' },
   { title: 'TypeScript', institution: 'Udemy', period: 'abr/2024' },
   { title: 'Ionic Framework', institution: 'Udemy', period: 'fev/2024' },
-  { title: 'Terminal Linux', institution: 'Udemy', period: 'abr/2023' },
   { title: 'Active Directory', institution: 'Udemy', period: 'abr/2023' },
-  { title: 'Git e GitHub', institution: 'UniGuairacá' },
   { title: 'Computação em Nuvem AWS', institution: 'Ka Solution', period: 'jan/2023' },
   {
     title: 'Infraestrutura de Redes: Cabeamento Estruturado e Redes Sem Fio',

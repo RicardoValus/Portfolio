@@ -34,12 +34,20 @@
           <p class="job-summary">{{ job.summary }}</p>
         }
         @if (job.roles.length === 1) {
+          @if (job.roles[0].intro) {
+            <p class="job-intro">{{ job.roles[0].intro }}</p>
+          }
           @if (job.roles[0].bullets.length > 0) {
             <ul>
               @for (bullet of job.roles[0].bullets; track bullet) {
                 <li>{{ bullet }}</li>
               }
             </ul>
+          }
+          @if (job.roles[0].link; as link) {
+            <p class="job-more">
+              <a [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+            </p>
           }
         } @else {
           <div class="job-roles">
@@ -52,12 +60,22 @@
                     <span>{{ role.type }}</span>
                   }
                 </p>
+                @if (role.intro) {
+                  <p class="job-intro">{{ role.intro }}</p>
+                }
                 @if (role.bullets.length > 0) {
                   <ul>
                     @for (bullet of role.bullets; track bullet) {
                       <li>{{ bullet }}</li>
                     }
                   </ul>
+                }
+                @if (role.link; as link) {
+                  <p class="job-more">
+                    <a [href]="link.href" target="_blank" rel="noopener noreferrer">{{
+                      link.label
+                    }}</a>
+                  </p>
                 }
               </div>
             }
