@@ -47,6 +47,7 @@ export const availableScreenshots: ReadonlySet<string> = new Set<string>([
   'garimpo',
   'grana',
   'rango',
+  'meet-seguro',
 ]);
 
 function screenshot(id: string): string {
@@ -158,6 +159,27 @@ export const projects: readonly Project[] = [
     // Hidden: the README is still the Angular CLI template and the app only runs locally.
     visible: false,
     screenshot: screenshot('angular-webrtc'),
+  },
+  {
+    id: 'meet-seguro',
+    name: 'Meet Seguro',
+    description:
+      'Videochamada em grupo no estilo Jitsi, feita para a Dallo Sistemas. Cada conta tem uma sala fixa; o anfitrião abre ligações nomeadas e gera convites de uso único para quem não tem conta. O LiveKit leva áudio e vídeo. A API em PHP cuida de contas, salas, ligações e convites.',
+    category: 'Full stack',
+    stack: [
+      tech('Angular', 'siAngular'),
+      tech('PHP', 'siPhp'),
+      tech('LiveKit', 'siLivekit'),
+      tech('MariaDB', 'siMariadb'),
+      tech('Docker', 'siDocker'),
+    ],
+    repoUrl: null,
+    links: [{ label: 'Ver site', href: 'https://meetseguro.com.br/login' }],
+    lifecycle: 'live',
+    access: 'private',
+    featured: false,
+    visible: true,
+    screenshot: screenshot('meet-seguro'),
   },
   {
     id: 'maintenence_pro',

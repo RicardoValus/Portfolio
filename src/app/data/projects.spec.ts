@@ -37,7 +37,21 @@ describe('projects', () => {
 
   it('should count the visible projects after Order Delivery is gone', () => {
     expect(projects.some((project) => project.id === 'order-delivery')).toBe(false);
-    expect(visibleProjectCount(projects)).toBe(9);
+    expect(visibleProjectCount(projects)).toBe(10);
+  });
+
+  it('should list Meet Seguro as live and private, with the public login', () => {
+    const meet = projects.find((project) => project.id === 'meet-seguro');
+    if (!meet) {
+      throw new Error('Meet Seguro ausente');
+    }
+
+    expect(meet.visible).toBe(true);
+    expect(meet.lifecycle).toBe('live');
+    expect(meet.access).toBe('private');
+    expect(meet.repoUrl).toBeNull();
+    expect(meet.links).toEqual([{ label: 'Ver site', href: 'https://meetseguro.com.br/login' }]);
+    expect(gridProjects(projects, 'Todos').map((project) => project.id)).toContain('meet-seguro');
   });
 
   it('should filter by category', () => {
