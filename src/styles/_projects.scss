@@ -37,6 +37,23 @@ mat-card.project-card {
 
 .shot {
   background: var(--color-bg);
+  overflow: hidden;
+}
+
+.shot[data-shot='todo-app'] img {
+  transform: scale(1.62);
+}
+
+.shot[data-shot='capacitor-phone-call-notification-android'] img {
+  transform: scale(1.52);
+}
+
+.shot[data-shot='maintenence_pro'] img {
+  transform: scale(1.5);
+}
+
+.shot[data-shot='tasks-project'] img {
+  transform: scale(1.18);
 }
 
 .shot img,
@@ -49,6 +66,7 @@ mat-card.project-card {
 .shot img {
   height: auto;
   object-fit: cover;
+  transform-origin: center;
 }
 
 .shot-fallback {

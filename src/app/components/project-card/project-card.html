@@ -1,6 +1,6 @@
 <mat-card class="project-card" appearance="outlined">
   <span class="card-frame" aria-hidden="true"></span>
-  <div class="shot">
+  <div class="shot" [attr.data-shot]="project().id">
     @if (showScreenshot()) {
       <img [ngSrc]="project().screenshot" [width]="shotWidth" [height]="shotHeight" alt="" />
     } @else {

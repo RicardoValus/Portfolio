@@ -1,15 +1,7 @@
 <footer class="site-footer">
   <div class="footer-bar">
+    <p class="copyright">© {{ year }} {{ site.name }}</p>
     <div class="footer-links">
-      <a
-        class="footer-text-link"
-        [href]="site.whatsappUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp
-      </a>
-      <a class="footer-text-link" [href]="mailto">{{ site.contactEmail }}</a>
       <a
         class="icon-link"
         [href]="site.linkedin"
@@ -28,8 +20,6 @@
       >
         <app-icon name="siGithub"></app-icon>
       </a>
-      <a class="footer-text-link" [href]="site.cvUrl" download>Baixar currículo</a>
     </div>
-    <p class="copyright">© {{ year }} {{ site.name }}</p>
   </div>
 </footer>

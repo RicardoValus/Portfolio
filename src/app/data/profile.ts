@@ -16,9 +16,9 @@ export const profile: Profile = {
     'Tenho conhecimento em Python, C, Java e cibersegurança, além de servidores e redes. No curso.dev /web, do Filipe Deschamps, aprofundo o que uso no dia a dia. Antes do front passei pela infraestrutura (servidores, redes, Active Directory), o que me ajuda a enxergar o sistema do banco até a tela.',
   ],
   facts: [
-    '2+ anos de experiência',
-    'Pós em Desenvolvimento Web com Angular (540h)',
-    'Desde mar/2024 no ChatSeguro, hoje como Pleno',
+    'Pleno no ChatSeguro',
+    'Pós-graduação na FETES',
+    'Bacharel pela UniGuairacá',
   ],
 };
 

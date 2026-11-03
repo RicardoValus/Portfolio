@@ -11,5 +11,4 @@ import { Icon } from '../icon/icon';
 export class Footer {
   protected readonly site = siteConfig;
   protected readonly year = new Date().getFullYear();
-  protected readonly mailto = `mailto:${siteConfig.contactEmail}`;
 }
