@@ -19,6 +19,7 @@ export const skillGroups: readonly SkillGroup[] = [
       tech('Angular Material', 'siMaterialdesign'),
       tech('Electron', 'siElectron'),
       tech('WebRTC', 'siWebrtc'),
+      tech('PWA', 'siPwa'),
     ],
   },
   {
@@ -27,7 +28,8 @@ export const skillGroups: readonly SkillGroup[] = [
     items: [
       tech('Ionic', 'siIonic'),
       tech('Capacitor', 'siCapacitor'),
-      textChip('Java (Android)'),
+      tech('Java (Android)', 'siOpenjdk'),
+      tech('Android', 'siAndroid'),
       tech('SQLite', 'siSqlite'),
     ],
   },
@@ -41,6 +43,7 @@ export const skillGroups: readonly SkillGroup[] = [
       tech('MariaDB', 'siMariadb'),
       tech('Python', 'siPython'),
       tech('Firebase', 'siFirebase'),
+      tech('LiveKit', 'siLivekit'),
     ],
   },
   {
@@ -49,14 +52,16 @@ export const skillGroups: readonly SkillGroup[] = [
     items: [
       tech('Debian', 'siDebian'),
       tech('Nginx', 'siNginx'),
+      tech('Docker', 'siDocker'),
+      tech('Shell', 'siGnubash'),
       tech('Git', 'siGit'),
       tech('GitHub', 'siGithub'),
-      textChip('Azure DevOps'),
+      tech('Azure DevOps', 'azureDevOps'),
       tech('Proxmox', 'siProxmox'),
-      textChip('Zabbix'),
+      tech('Zabbix', 'zabbix'),
       tech('Fortinet', 'siFortinet'),
       tech('UniFi', 'siUbiquiti'),
-      textChip('Active Directory'),
+      tech('Active Directory', 'activeDirectory'),
     ],
   },
 ];
