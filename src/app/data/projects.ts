@@ -93,7 +93,7 @@ export const projects: readonly Project[] = [
       tech('Capacitor', 'siCapacitor'),
       tech('Electron', 'siElectron'),
       tech('Firebase', 'siFirebase'),
-      textChip('Dexie'),
+      tech('Dexie', 'dexie'),
     ],
     repoUrl: 'https://github.com/RicardoValus/Correria',
     links: [
@@ -219,6 +219,7 @@ export const projects: readonly Project[] = [
       tech('Shell', 'siGnubash'),
       textChip('Meson'),
       tech('Debian', 'siDebian'),
+      tech('Pop!_OS', 'siPopos'),
     ],
     repoUrl: 'https://github.com/RicardoValus/maintenence_pro',
     links: [{ label: 'Ver código', href: 'https://github.com/RicardoValus/maintenence_pro' }],

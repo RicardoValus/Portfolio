@@ -56,6 +56,14 @@ mat-card.project-card {
   transform: scale(1.18);
 }
 
+.shot[data-shot='correria'] img {
+  transform: scale(1.18);
+}
+
+.shot[data-shot='rango'] img {
+  transform: scale(1.72);
+}
+
 .shot img,
 .shot-fallback {
   width: 100%;
