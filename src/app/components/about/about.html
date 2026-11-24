@@ -19,11 +19,13 @@
           <p>{{ paragraph }}</p>
         }
       </div>
-      <ul class="facts">
-        @for (fact of profile.facts; track fact) {
-          <li>{{ fact }}</li>
-        }
-      </ul>
+      @if (profile.facts.length > 0) {
+        <ul class="facts">
+          @for (fact of profile.facts; track fact) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      }
     </div>
   </div>
 </section>

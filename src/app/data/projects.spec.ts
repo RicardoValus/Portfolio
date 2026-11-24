@@ -18,22 +18,23 @@ describe('projects', () => {
     expect(visible.map((project) => project.id)).toContain('rango');
   });
 
-  it('should keep four featured projects when the filter is Todos', () => {
+  it('should keep five featured projects when the filter is Todos', () => {
     expect(featuredProjects(projects, 'Todos').map((project) => project.id)).toEqual([
-      'rockers',
       'correria',
-      'meet-seguro',
       'resenha',
+      'meet-seguro',
+      'rango',
+      'garimpo',
     ]);
   });
 
-  it('should leave featured projects out of the grid and keep generic-art projects last', () => {
+  it('should leave featured projects out of the grid and keep short projects last', () => {
     const gridIds = gridProjects(projects, 'Todos').map((project) => project.id);
 
-    expect(gridIds).not.toContain('rockers');
     expect(gridIds).not.toContain('correria');
+    expect(gridIds).not.toContain('garimpo');
     expect(gridIds).not.toContain('order-delivery');
-    expect(gridIds).toContain('garimpo');
+    expect(gridIds).toContain('rockers');
     expect(gridIds.slice(-3)).toEqual([
       'capacitor-phone-call-notification-android',
       'todo-app',

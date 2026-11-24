@@ -1,14 +1,10 @@
 <mat-card class="project-card" appearance="outlined">
   <span class="card-frame" aria-hidden="true"></span>
-  <div class="shot" [attr.data-shot]="project().id">
-    @if (showScreenshot()) {
+  @if (showScreenshot()) {
+    <div class="shot" [attr.data-shot]="project().id">
       <img [ngSrc]="project().screenshot" [width]="shotWidth" [height]="shotHeight" alt="" />
-    } @else {
-      <div class="shot-fallback" aria-hidden="true">
-        <span>{{ project().name }}</span>
-      </div>
-    }
-  </div>
+    </div>
+  }
   <mat-card-content class="card-body">
     @if (badges().length > 0) {
       <div class="card-badges">

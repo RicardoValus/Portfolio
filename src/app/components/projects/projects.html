@@ -20,9 +20,10 @@
     </div>
   }
   @if (grid().length > 0) {
-    <div class="project-grid">
+    <p class="section-kicker others-kicker" appReveal>Outros projetos</p>
+    <div class="project-grid is-compact">
       @for (project of grid(); track project.id) {
-        <app-project-card [project]="project" />
+        <app-project-card [project]="project" [compact]="true" />
       }
     </div>
   }

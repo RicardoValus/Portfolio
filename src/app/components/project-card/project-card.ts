@@ -22,9 +22,12 @@ import { StackChip } from '../stack-chip/stack-chip';
 })
 export class ProjectCard {
   readonly project = input.required<Project>();
+  readonly compact = input(false);
   protected readonly shotWidth = shotWidth;
   protected readonly shotHeight = shotHeight;
-  protected readonly showScreenshot = computed(() => availableScreenshots.has(this.project().id));
+  protected readonly showScreenshot = computed(
+    () => !this.compact() && availableScreenshots.has(this.project().id),
+  );
   protected readonly badges = computed(() => projectBadges(this.project()));
   protected readonly links = computed(() => projectLinks(this.project()));
 }

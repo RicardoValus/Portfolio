@@ -33,7 +33,7 @@ export const experience: readonly ExperienceEntry[] = [
     company: 'ChatSeguro',
     location: 'Paraná, Brasil · Remoto',
     summary:
-      'Produto da Dallo Sistemas para comunicação corporativa, em desktop, web e celular. Reúne chat, chamadas e ServiceDesk, com lista de contatos privada, auditoria de mensagens e conformidade com a LGPD.',
+      'Produto da Dallo Sistemas para comunicação corporativa em desktop, web e celular. Reúne chat, chamadas e ServiceDesk, com lista de contatos privada, auditoria e conformidade com a LGPD.',
     logo: { src: '/assets/companies/chatseguro.webp', width: 120, height: 60 },
     roles: [
       {
@@ -45,8 +45,7 @@ export const experience: readonly ExperienceEntry[] = [
           'Chamadas de áudio e vídeo 1:1 (v2.3.0) e em grupo (v2.4.0), com escolha da tela compartilhada (v2.4.16)',
           'Tela inicial com resumo de atividades, lista de sessões ativas (v2.4.16) e aba Agenda de tarefas (v2.4.17)',
           'Anexos junto com a mensagem (v2.4.16), mensagens fixadas (v2.4.12) e favoritas (v2.4.10), formatação de texto (v2.4.13) e tema escuro (v2.3.2)',
-          'No desktop (Electron), cuido de integrações via IPC, como o seletor de tela das chamadas; no mobile (Ionic/Capacitor), levo as novidades do desktop para o app.',
-          'Desenvolvo a interface em Angular, Material e TypeScript, desktop com Electron, apps com Ionic e Capacitor, e APIs em PHP (Laminas / Apigility).',
+          'No desktop (Electron) cuido de integrações via IPC, como o seletor de tela das chamadas; no mobile (Ionic/Capacitor), levo as novidades do desktop para o app.',
         ],
         link: {
           label: 'Changelog público do Chat Seguro 2 →',

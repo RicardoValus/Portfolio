@@ -44,26 +44,13 @@ mat-card.project-card {
   transform: scale(1.5);
 }
 
-.shot img,
-.shot-fallback {
+.shot img {
   width: 100%;
   aspect-ratio: 16 / 10;
   display: block;
-}
-
-.shot img {
   height: auto;
   object-fit: cover;
   transform-origin: center;
-}
-
-.shot-fallback {
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  color: var(--color-text);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
 }
 
 .card-body {
@@ -164,7 +151,8 @@ mat-card.project-card {
   border-bottom-color: var(--color-accent);
 }
 
-.certificates-kicker {
+.certificates-kicker,
+.others-kicker {
   margin-top: 2rem;
 }
 
@@ -199,11 +187,6 @@ mat-card.project-card {
   margin-bottom: 0.35rem;
   font-size: 1.02rem;
   line-height: 1.3;
-}
-
-.library-about {
-  margin-top: 0.75rem;
-  max-width: var(--measure);
 }
 
 .library-help {
@@ -299,7 +282,7 @@ mat-card.project-card {
   }
 
   .facts {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-grid,
