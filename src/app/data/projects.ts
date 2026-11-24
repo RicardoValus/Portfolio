@@ -37,12 +37,9 @@ export const shotHeight = 500;
 export const availableScreenshots: ReadonlySet<string> = new Set<string>([
   'rockers',
   'correria',
-  'capacitor-phone-call-notification-android',
-  'todo-app',
   'resenha',
   'angular-webrtc',
   'maintenence_pro',
-  'tasks-project',
   'BeatFlow',
   'Synk',
   'garimpo',
@@ -167,48 +164,6 @@ export const projects: readonly Project[] = [
     screenshot: screenshot('angular-webrtc'),
   },
   {
-    id: 'capacitor-phone-call-notification-android',
-    name: 'Phone Call Notification',
-    // TODO: Ricardo vai decidir se acrescenta "baseado em @anuradev/capacitor-phone-call-notification".
-    description:
-      'Plugin Capacitor em Java para chamada recebida e em andamento no Android, mesmo com o app em segundo plano. Ações de atender, recusar, encerrar e colocar em espera, com checagem de permissão de notificações.',
-    category: 'Mobile',
-    stack: [tech('Capacitor', 'siCapacitor'), tech('Java', 'siOpenjdk')],
-    repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
-    links: [
-      {
-        label: 'Ver código',
-        href: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
-      },
-    ],
-    lifecycle: 'completed',
-    access: 'open-source',
-    featured: false,
-    visible: true,
-    screenshot: screenshot('capacitor-phone-call-notification-android'),
-  },
-  {
-    id: 'todo-app',
-    name: 'Todo App',
-    description:
-      'Lista de tarefas em monorepo: Angular 22, API em Mezzio (PHP 8.4), MariaDB, Nginx e phpMyAdmin no Debian 13.',
-    category: 'Full stack',
-    stack: [
-      tech('Angular', 'siAngular'),
-      tech('PHP (Mezzio)', 'siPhp'),
-      tech('MariaDB', 'siMariadb'),
-      tech('Nginx', 'siNginx'),
-      tech('Debian', 'siDebian'),
-    ],
-    repoUrl: 'https://github.com/RicardoValus/todo-app',
-    links: [{ label: 'Ver código', href: 'https://github.com/RicardoValus/todo-app' }],
-    lifecycle: 'completed',
-    access: 'open-source',
-    featured: false,
-    visible: true,
-    screenshot: screenshot('todo-app'),
-  },
-  {
     id: 'maintenence_pro',
     name: 'Manutenção Pro',
     description:
@@ -228,24 +183,6 @@ export const projects: readonly Project[] = [
     featured: false,
     visible: true,
     screenshot: screenshot('maintenence_pro'),
-  },
-  {
-    id: 'tasks-project',
-    name: 'Tasks Project',
-    description:
-      'Prática de arquitetura: usuários e tarefas, API REST com token, do Nginx ao Angular, no Debian 12.',
-    category: 'Full stack',
-    stack: [
-      tech('Debian', 'siDebian'),
-      tech('Nginx', 'siNginx'),
-      tech('PHP (Laminas/Apigility)', 'siPhp'),
-      tech('MariaDB', 'siMariadb'),
-      tech('Angular', 'siAngular'),
-    ],
-    repoUrl: 'https://github.com/RicardoValus/tasks-project',
-    featured: false,
-    visible: true,
-    screenshot: screenshot('tasks-project'),
   },
   {
     id: 'BeatFlow',
@@ -332,6 +269,66 @@ export const projects: readonly Project[] = [
     featured: false,
     visible: true,
     screenshot: screenshot('rango'),
+  },
+  {
+    id: 'capacitor-phone-call-notification-android',
+    name: 'Phone Call Notification',
+    // TODO: Ricardo vai decidir se acrescenta "baseado em @anuradev/capacitor-phone-call-notification".
+    description:
+      'Plugin Capacitor em Java para chamada recebida e em andamento no Android, mesmo com o app em segundo plano. Ações de atender, recusar, encerrar e colocar em espera, com checagem de permissão de notificações.',
+    category: 'Mobile',
+    stack: [tech('Capacitor', 'siCapacitor'), tech('Java', 'siOpenjdk')],
+    repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
+    links: [
+      {
+        label: 'Ver código',
+        href: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
+      },
+    ],
+    lifecycle: 'completed',
+    access: 'open-source',
+    featured: false,
+    visible: true,
+    screenshot: screenshot('capacitor-phone-call-notification-android'),
+  },
+  {
+    id: 'todo-app',
+    name: 'Todo App',
+    description:
+      'Lista de tarefas em monorepo: Angular 22, API em Mezzio (PHP 8.4), MariaDB, Nginx e phpMyAdmin no Debian 13.',
+    category: 'Full stack',
+    stack: [
+      tech('Angular', 'siAngular'),
+      tech('PHP (Mezzio)', 'siPhp'),
+      tech('MariaDB', 'siMariadb'),
+      tech('Nginx', 'siNginx'),
+      tech('Debian', 'siDebian'),
+    ],
+    repoUrl: 'https://github.com/RicardoValus/todo-app',
+    links: [{ label: 'Ver código', href: 'https://github.com/RicardoValus/todo-app' }],
+    lifecycle: 'completed',
+    access: 'open-source',
+    featured: false,
+    visible: true,
+    screenshot: screenshot('todo-app'),
+  },
+  {
+    id: 'tasks-project',
+    name: 'Tasks Project',
+    description:
+      'Prática de arquitetura: usuários e tarefas, API REST com token, do Nginx ao Angular, no Debian 12.',
+    category: 'Full stack',
+    stack: [
+      tech('Debian', 'siDebian'),
+      tech('Nginx', 'siNginx'),
+      tech('PHP (Laminas/Apigility)', 'siPhp'),
+      tech('MariaDB', 'siMariadb'),
+      tech('Angular', 'siAngular'),
+    ],
+    repoUrl: 'https://github.com/RicardoValus/tasks-project',
+    featured: false,
+    visible: true,
+    screenshot: screenshot('tasks-project'),
   },
 ];
 

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  availableScreenshots,
   featuredProjects,
   gridProjects,
   projectBadges,
@@ -26,15 +27,24 @@ describe('projects', () => {
     ]);
   });
 
-  it('should leave featured projects out of the grid and keep Phone Call there', () => {
+  it('should leave featured projects out of the grid and keep generic-art projects last', () => {
     const gridIds = gridProjects(projects, 'Todos').map((project) => project.id);
 
     expect(gridIds).not.toContain('rockers');
     expect(gridIds).not.toContain('correria');
     expect(gridIds).not.toContain('order-delivery');
-    expect(gridIds).toContain('capacitor-phone-call-notification-android');
     expect(gridIds).toContain('garimpo');
-    expect(gridIds).toContain('tasks-project');
+    expect(gridIds.slice(-3)).toEqual([
+      'capacitor-phone-call-notification-android',
+      'todo-app',
+      'tasks-project',
+    ]);
+  });
+
+  it('should hide screenshots for projects that only had generic artwork', () => {
+    expect(availableScreenshots.has('todo-app')).toBe(false);
+    expect(availableScreenshots.has('capacitor-phone-call-notification-android')).toBe(false);
+    expect(availableScreenshots.has('tasks-project')).toBe(false);
   });
 
   it('should count the visible projects after Order Delivery is gone', () => {
