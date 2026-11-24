@@ -34,12 +34,14 @@
 }
 
 .facts li,
-.education-list > li {
+.education-list > li,
+.library-list > li {
   position: relative;
 }
 
 .facts li::before,
-.education-list > li::before {
+.education-list > li::before,
+.library-list > li::before {
   content: '';
   position: absolute;
   top: 0.65rem;
@@ -55,7 +57,8 @@
   left: 0;
 }
 
-.education-list > li::before {
+.education-list > li::before,
+.library-list > li::before {
   left: 0;
   top: 0;
   bottom: 0;
@@ -73,7 +76,9 @@
 .facts li:hover::before,
 .facts li:focus-within::before,
 .education-list > li:hover::before,
-.education-list > li:focus-within::before {
+.education-list > li:focus-within::before,
+.library-list > li:hover::before,
+.library-list > li:focus-within::before {
   transform: scaleY(1);
 }
 

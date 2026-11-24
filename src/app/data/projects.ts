@@ -36,6 +36,7 @@ export const shotHeight = 500;
 
 export const availableScreenshots: ReadonlySet<string> = new Set<string>([
   'rockers',
+  'correria',
   'capacitor-phone-call-notification-android',
   'todo-app',
   'resenha',
@@ -80,25 +81,30 @@ export const projects: readonly Project[] = [
     screenshot: screenshot('rockers'),
   },
   {
-    id: 'capacitor-phone-call-notification-android',
-    name: 'Phone Call Notification',
-    // TODO: Ricardo vai decidir se acrescenta "baseado em @anuradev/capacitor-phone-call-notification".
+    id: 'correria',
+    name: 'Correria',
     description:
-      'Plugin Capacitor em Java para chamada recebida e em andamento no Android, mesmo com o app em segundo plano. Ações de atender, recusar, encerrar e colocar em espera, com checagem de permissão de notificações.',
+      'App pessoal offline-first que unifica Hoje, Tarefas/Notas e Financeiro, com tema Material 3 berinjela + laranja. Angular 19, Ionic 8, Capacitor, Electron e Dexie; login Firebase (e-mail/Google) ou convidado offline.',
     category: 'Mobile',
-    stack: [tech('Capacitor', 'siCapacitor'), tech('Java', 'siOpenjdk')],
-    repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
-    links: [
-      {
-        label: 'Ver código',
-        href: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
-      },
+    stack: [
+      tech('Ionic', 'siIonic'),
+      tech('Angular', 'siAngular'),
+      tech('Angular Material', 'siMaterialdesign'),
+      tech('Capacitor', 'siCapacitor'),
+      tech('Electron', 'siElectron'),
+      tech('Firebase', 'siFirebase'),
+      textChip('Dexie'),
     ],
-    lifecycle: 'completed',
+    repoUrl: 'https://github.com/RicardoValus/Correria',
+    links: [
+      { label: 'Abrir app', href: 'https://correria-app.web.app/' },
+      { label: 'Ver código', href: 'https://github.com/RicardoValus/Correria' },
+    ],
+    lifecycle: 'live',
     access: 'open-source',
     featured: true,
     visible: true,
-    screenshot: screenshot('capacitor-phone-call-notification-android'),
+    screenshot: screenshot('correria'),
   },
   {
     id: 'meet-seguro',
@@ -159,6 +165,27 @@ export const projects: readonly Project[] = [
     // Hidden: the README is still the Angular CLI template and the app only runs locally.
     visible: false,
     screenshot: screenshot('angular-webrtc'),
+  },
+  {
+    id: 'capacitor-phone-call-notification-android',
+    name: 'Phone Call Notification',
+    // TODO: Ricardo vai decidir se acrescenta "baseado em @anuradev/capacitor-phone-call-notification".
+    description:
+      'Plugin Capacitor em Java para chamada recebida e em andamento no Android, mesmo com o app em segundo plano. Ações de atender, recusar, encerrar e colocar em espera, com checagem de permissão de notificações.',
+    category: 'Mobile',
+    stack: [tech('Capacitor', 'siCapacitor'), tech('Java', 'siOpenjdk')],
+    repoUrl: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
+    links: [
+      {
+        label: 'Ver código',
+        href: 'https://github.com/RicardoValus/capacitor-phone-call-notification-android-ios',
+      },
+    ],
+    lifecycle: 'completed',
+    access: 'open-source',
+    featured: false,
+    visible: true,
+    screenshot: screenshot('capacitor-phone-call-notification-android'),
   },
   {
     id: 'todo-app',

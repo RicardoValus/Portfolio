@@ -20,24 +20,42 @@ describe('projects', () => {
   it('should keep four featured projects when the filter is Todos', () => {
     expect(featuredProjects(projects, 'Todos').map((project) => project.id)).toEqual([
       'rockers',
-      'capacitor-phone-call-notification-android',
+      'correria',
       'meet-seguro',
       'resenha',
     ]);
   });
 
-  it('should leave featured projects out of the grid', () => {
+  it('should leave featured projects out of the grid and keep Phone Call there', () => {
     const gridIds = gridProjects(projects, 'Todos').map((project) => project.id);
 
     expect(gridIds).not.toContain('rockers');
+    expect(gridIds).not.toContain('correria');
     expect(gridIds).not.toContain('order-delivery');
+    expect(gridIds).toContain('capacitor-phone-call-notification-android');
     expect(gridIds).toContain('garimpo');
     expect(gridIds).toContain('tasks-project');
   });
 
   it('should count the visible projects after Order Delivery is gone', () => {
     expect(projects.some((project) => project.id === 'order-delivery')).toBe(false);
-    expect(visibleProjectCount(projects)).toBe(10);
+    expect(visibleProjectCount(projects)).toBe(11);
+  });
+
+  it('should list Correria as live, open-source and featured, with app and repo links', () => {
+    const correria = projects.find((project) => project.id === 'correria');
+    if (!correria) {
+      throw new Error('Correria ausente');
+    }
+
+    expect(correria.visible).toBe(true);
+    expect(correria.featured).toBe(true);
+    expect(correria.lifecycle).toBe('live');
+    expect(correria.access).toBe('open-source');
+    expect(projectLinks(correria).map((link) => link.href)).toEqual([
+      'https://correria-app.web.app/',
+      'https://github.com/RicardoValus/Correria',
+    ]);
   });
 
   it('should list Meet Seguro as live and private, with the public login', () => {

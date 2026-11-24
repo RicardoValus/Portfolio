@@ -1,0 +1,24 @@
+<section class="section" id="biblioteca" appReveal>
+  <p class="section-kicker">06</p>
+  <h2 class="section-title">Biblioteca técnica</h2>
+  <p class="measure library-intro">{{ intro }}</p>
+  <figure class="library-shelf">
+    <img
+      class="library-shelf-image"
+      [ngSrc]="shelfImage"
+      [width]="shelfWidth"
+      [height]="shelfHeight"
+      alt="Quatro livros técnicos lado a lado: Algoritmos, Código Limpo, Entendendo Algoritmos e Aprendendo TypeScript"
+    />
+  </figure>
+  <ul class="library-list">
+    @for (book of books; track book.id) {
+      <li class="library-book">
+        <h3>{{ book.title }}</h3>
+        <p class="job-meta">{{ book.author }}</p>
+        <p class="library-about">{{ book.about }}</p>
+        <p class="library-help">{{ book.howItHelps }}</p>
+      </li>
+    }
+  </ul>
+</section>
