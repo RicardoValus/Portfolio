@@ -70,7 +70,7 @@ export const projects: readonly Project[] = [
     ],
     repoUrl: 'https://github.com/RicardoValus/Correria',
     links: [
-      { label: 'Abrir app', href: 'https://correria-app.web.app/' },
+      { label: 'Abrir app', href: 'https://correriaapp.com.br/' },
       { label: 'Ver código', href: 'https://github.com/RicardoValus/Correria' },
     ],
     lifecycle: 'live',

@@ -64,7 +64,7 @@ describe('projects', () => {
     expect(correria.lifecycle).toBe('live');
     expect(correria.access).toBe('open-source');
     expect(projectLinks(correria).map((link) => link.href)).toEqual([
-      'https://correria-app.web.app/',
+      'https://correriaapp.com.br/',
       'https://github.com/RicardoValus/Correria',
     ]);
   });
