@@ -53,7 +53,7 @@ describe('projects', () => {
     expect(visibleProjectCount(projects)).toBe(11);
   });
 
-  it('should list Correria as live, open-source and featured, with app and repo links', () => {
+  it('should list Correria as live and private, with the public app link', () => {
     const correria = projects.find((project) => project.id === 'correria');
     if (!correria) {
       throw new Error('Correria ausente');
@@ -62,10 +62,10 @@ describe('projects', () => {
     expect(correria.visible).toBe(true);
     expect(correria.featured).toBe(true);
     expect(correria.lifecycle).toBe('live');
-    expect(correria.access).toBe('open-source');
+    expect(correria.access).toBe('private');
+    expect(correria.repoUrl).toBeNull();
     expect(projectLinks(correria).map((link) => link.href)).toEqual([
       'https://correriaapp.com.br/',
-      'https://github.com/RicardoValus/Correria',
     ]);
   });
 
