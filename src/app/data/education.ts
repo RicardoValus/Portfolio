@@ -13,12 +13,12 @@ export const education: readonly EducationEntry[] = [
   {
     title: 'Pós-graduação em Desenvolvimento Web com Ênfase em Angular',
     institution: 'FETES',
-    period: 'nov/2024 – dez/2025',
+    period: 'nov/2024 - dez/2025',
   },
   {
     title: 'Bacharelado em Análise e Desenvolvimento de Sistemas',
     institution: 'UniGuairacá',
-    period: 'fev/2022 – jun/2024',
+    period: 'fev/2022 - jun/2024',
   },
 ];
 

@@ -7,7 +7,7 @@ export interface LibraryBook {
 }
 
 export const libraryIntro =
-  'Livros que li e que ainda uso no dia a dia — do raciocínio básico ao TypeScript tipado que roda no ChatSeguro, no Resenha e no Correria.';
+  'Livros que li e que ainda uso no dia a dia: do raciocínio básico ao TypeScript tipado que roda no ChatSeguro, no Resenha e no Correria.';
 
 export const libraryShelfImage = '/assets/books/biblioteca.webp';
 export const libraryShelfWidth = 1024;
@@ -30,7 +30,7 @@ export const libraryBooks: readonly LibraryBook[] = [
     about:
       'Nomes honestos, funções pequenas, responsabilidade única e o cuidado com o código que outras pessoas (e o eu do futuro) vão manter.',
     howItHelps:
-      'Orienta refactors no portfolio e nos apps Ionic/Angular: serviços em vez de lógica na tela, componentes focados e APIs legíveis — o mesmo critério que uso no Resenha e no Meet Seguro.',
+      'Orienta refactors no portfolio e nos apps Ionic/Angular: serviços em vez de lógica na tela, componentes focados e APIs legíveis. O mesmo critério que uso no Resenha e no Meet Seguro.',
   },
   {
     id: 'entendendo-algoritmos',
@@ -39,7 +39,7 @@ export const libraryBooks: readonly LibraryBook[] = [
     about:
       'Guia ilustrado de estruturas e algoritmos clássicos: busca, ordenação, grafos e a noção de Big O sem enrolação.',
     howItHelps:
-      'Ajuda a escolher estruturas e a medir custo quando filtro listas grandes, sincronizo dados offline (Dexie/SQLite) ou monto projeções financeiras — menos chute, mais decisão consciente.',
+      'Ajuda a escolher estruturas e a medir custo quando filtro listas grandes, sincronizo dados offline (Dexie/SQLite) ou monto projeções financeiras: menos chute, mais decisão consciente.',
   },
   {
     id: 'aprendendo-typescript',
@@ -48,6 +48,6 @@ export const libraryBooks: readonly LibraryBook[] = [
     about:
       'TypeScript moderno: tipagem estrita, genéricos, narrowing e como o compilador vira aliado no dia a dia web.',
     howItHelps:
-      'É o idioma do meu trabalho: Angular 19, Ionic, Capacitor e Electron. Tipagem forte reduz regressão em auth, IPC e contratos de API — exatamente o que o stack do Correria e do ChatSeguro exige.',
+      'É o idioma do meu trabalho: Angular 19, Ionic, Capacitor e Electron. Tipagem forte reduz regressão em auth, IPC e contratos de API. Exatamente o que o stack do Correria e do ChatSeguro exige.',
   },
 ];

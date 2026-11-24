@@ -25,13 +25,13 @@ Uso Node 22 ou 24. No 20 o Angular avisa que a versão não é a esperada.
 
 O que aparece na página está em `src/app/data/`:
 
-- `site.config.ts` — nome, e-mail, WhatsApp, LinkedIn, GitHub, currículo e a URL do site
-- `profile.ts` — texto do topo e do Sobre
-- `experience.ts` — experiências
-- `projects.ts` — projetos
-- `skills.ts` — stack
-- `education.ts` — formação e certificados
-- `tech-icons.ts` — ícone do simple-icons, ou só o nome quando não tem
+- `site.config.ts`: nome, e-mail, WhatsApp, LinkedIn, GitHub, currículo e a URL do site
+- `profile.ts`: texto do topo e do Sobre
+- `experience.ts`: experiências
+- `projects.ts`: projetos
+- `skills.ts`: stack
+- `education.ts`: formação e certificados
+- `tech-icons.ts`: ícone do simple-icons, ou só o nome quando não tem
 
 Projeto novo: copio um que já existe e troco os campos. Selos opcionais: `lifecycle` (`live`, `in-development`, `completed`) e `access` (`open-source`, `private`). Links ficam em `links` e só aparecem quando a URL existe. Sem `links`, o card usa `repoUrl` com o texto "Ver código". Se ainda não quero na página, `visible: false`.
 

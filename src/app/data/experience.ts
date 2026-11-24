@@ -38,7 +38,7 @@ export const experience: readonly ExperienceEntry[] = [
     roles: [
       {
         title: 'Desenvolvedor de software Pleno',
-        period: 'mar/2024 – atual',
+        period: 'mar/2024 - atual',
         type: 'Tempo integral',
         intro: 'Nessa squad, ajudei a entregar:',
         bullets: [
@@ -64,7 +64,7 @@ export const experience: readonly ExperienceEntry[] = [
     roles: [
       {
         title: 'Técnico Júnior de TI',
-        period: 'abr/2023 – jul/2023',
+        period: 'abr/2023 - jul/2023',
         type: 'Tempo integral',
         bullets: [
           'Dei suporte remoto com Remmina, além de manutenção de computadores e telefonia.',
@@ -75,7 +75,7 @@ export const experience: readonly ExperienceEntry[] = [
       },
       {
         title: 'Suporte ao usuário e manutenção de computadores',
-        period: 'mai/2022 – abr/2023',
+        period: 'mai/2022 - abr/2023',
         type: 'Estágio',
         bullets: [],
       },
