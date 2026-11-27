@@ -8,7 +8,7 @@ export interface Profile {
 
 export const profile: Profile = {
   headline: 'Desenvolvedor Angular & Ionic · Web e Mobile',
-  location: 'Guarapuava, Paraná, Brasil',
+  location: 'Turvo, Paraná · Atendo o Brasil todo',
   valueProp:
     'Crio interfaces web e aplicativos móveis com Angular e Ionic, da tela à integração com APIs e recursos nativos.',
   about: [
