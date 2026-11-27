@@ -40,8 +40,8 @@ html {
     (
       color: (
         theme-type: dark,
-        primary: mat.$red-palette,
-        tertiary: mat.$red-palette,
+        primary: mat.$orange-palette,
+        tertiary: mat.$violet-palette,
       ),
       typography: (
         plain-family: (
@@ -98,7 +98,7 @@ html {
       secondary-fixed-dim: tokens.$color-surface,
       on-secondary-fixed: tokens.$color-text,
       on-secondary-fixed-variant: tokens.$color-text,
-      tertiary: tokens.$color-accent,
+      tertiary: tokens.$color-accent-2,
       on-tertiary: tokens.$color-on-accent,
       tertiary-container: tokens.$color-surface,
       on-tertiary-container: tokens.$color-text,

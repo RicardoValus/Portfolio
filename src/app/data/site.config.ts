@@ -6,6 +6,7 @@ export interface SiteConfig {
   github: string;
   cvUrl: string;
   siteUrl: string;
+  googleAnalyticsId: string;
 }
 
 export const siteConfig: SiteConfig = {
@@ -15,7 +16,8 @@ export const siteConfig: SiteConfig = {
   linkedin: 'https://www.linkedin.com/in/ricardo-medlo-valus-a35429215',
   github: 'https://github.com/RicardoValus',
   cvUrl: '/assets/curriculo-ricardo-medlo-valus.pdf',
-  siteUrl: 'https://ricardo-medlo-valus-3yut.vercel.app',
+  siteUrl: 'https://ricardomedlovalus.com.br',
+  googleAnalyticsId: 'G-MBF57N33J9',
 };
 
 export const navItems = [

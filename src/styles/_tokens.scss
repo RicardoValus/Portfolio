@@ -2,8 +2,14 @@ $color-bg: #0f1115;
 $color-surface: #1a1d24;
 $color-text: #e8e6e3;
 $color-text-muted: #9aa0a6;
-$color-accent: #ff5a5f;
+$color-accent: #d4843c;
+$color-accent-2: #7a6a9e;
 $color-on-accent: #0f1115;
+$gradient-accent: linear-gradient(
+  90deg,
+  #{$color-accent} 0%,
+  #{$color-accent-2} 100%
+);
 
 :root {
   --color-bg: #{$color-bg};
@@ -11,7 +17,9 @@ $color-on-accent: #0f1115;
   --color-text: #{$color-text};
   --color-text-muted: #{$color-text-muted};
   --color-accent: #{$color-accent};
+  --color-accent-2: #{$color-accent-2};
   --color-on-accent: #{$color-on-accent};
+  --gradient-accent: #{$gradient-accent};
   --font-body: 'Inter', 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --header-height: 4.25rem;
