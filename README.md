@@ -17,7 +17,7 @@ Abre em http://localhost:4200.
 npm run build
 ```
 
-O que vai pra Vercel está em `dist/portfolio/browser`.
+O HTML estático fica em `dist/portfolio/browser`.
 
 Uso Node 22 ou 24. No 20 o Angular avisa que a versão não é a esperada.
 
@@ -41,16 +41,20 @@ Currículo: `public/assets/curriculo-ricardo-medlo-valus.pdf`.
 Foto: `public/assets/profile.webp`.
 Imagem do link: `public/assets/og-image.png` (1200×630).
 
-## Vercel
+## Deploy (Firebase Hosting)
 
-No ar em https://ricardo-medlo-valus-3yut.vercel.app.
+No ar em https://ricardomedlovalus.com.br.
 
-Preset Angular, build `npm run build`, output `dist/portfolio/browser`. Sem `vercel.json`.
+```bash
+npm run deploy
+```
 
-Se eu trocar o domínio, atualizo a URL nestes lugares:
+Projeto Firebase: `ricardo-medlo-valus`. Output: `dist/portfolio/browser`.
 
-- `siteUrl` em `src/app/data/site.config.ts`
-- canonical, Open Graph e o JSON-LD em `src/index.html`
+Domínio canônico e SEO:
+
+- `siteUrl` / `googleAnalyticsId` em `src/app/data/site.config.ts`
+- canonical, Open Graph, Twitter e JSON-LD em `src/index.html`
 - `public/robots.txt` e `public/sitemap.xml`
 
-Depois mando o sitemap no Search Console. A prévia do LinkedIn eu atualizo no [Post Inspector](https://www.linkedin.com/post-inspector/). O WhatsApp demora pra soltar a prévia antiga; reenvio o link depois do deploy.
+Search Console: verificar a propriedade `https://ricardomedlovalus.com.br`, enviar `https://ricardomedlovalus.com.br/sitemap.xml` e solicitar indexação da home. A prévia do LinkedIn eu atualizo no [Post Inspector](https://www.linkedin.com/post-inspector/). O WhatsApp demora pra soltar a prévia antiga; reenvio o link depois do deploy.

@@ -9,10 +9,19 @@
     <meta name="theme-color" content="#0f1115" />
     <meta
       name="description"
-      content="Portfólio de Ricardo Medlo Valus, desenvolvedor Angular e Ionic. Interfaces web e aplicativos móveis, da tela à integração com APIs e recursos nativos."
+      content="Portfólio de Ricardo Medlo Valus, desenvolvedor Angular e Ionic em Turvo/PR. Interfaces web e apps móveis, da tela à integração com APIs e recursos nativos."
     />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Ricardo Medlo Valus, Ricardo Valus, desenvolvedor Angular, desenvolvedor Ionic, portfolio Angular, Capacitor, TypeScript, Turvo PR"
+    />
+    <meta name="author" content="Ricardo Medlo Valus" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href="https://ricardomedlovalus.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://ricardomedlovalus.com.br/" />
+    <link rel="alternate" hreflang="x-default" href="https://ricardomedlovalus.com.br/" />
+    <meta property="og:site_name" content="Ricardo Medlo Valus" />
     <meta property="og:title" content="Ricardo Medlo Valus | Desenvolvedor Angular &amp; Ionic" />
     <meta
       property="og:description"
@@ -42,21 +51,52 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ricardo Medlo Valus",
-        "jobTitle": "Desenvolvedor Angular e Ionic",
-        "url": "https://ricardomedlovalus.com.br/",
-        "email": "mailto:ricardovalus.dev@gmail.com",
-        "image": "https://ricardomedlovalus.com.br/assets/profile.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Turvo",
-          "addressRegion": "PR",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/ricardo-medlo-valus-a35429215",
-          "https://github.com/RicardoValus"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://ricardomedlovalus.com.br/#website",
+            "url": "https://ricardomedlovalus.com.br/",
+            "name": "Ricardo Medlo Valus",
+            "alternateName": ["Ricardo Valus", "Portfólio Ricardo Medlo Valus"],
+            "description": "Portfólio de Ricardo Medlo Valus, desenvolvedor Angular e Ionic. Interfaces web e aplicativos móveis, da tela à integração com APIs e recursos nativos.",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://ricardomedlovalus.com.br/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://ricardomedlovalus.com.br/#person",
+            "name": "Ricardo Medlo Valus",
+            "alternateName": "Ricardo Valus",
+            "jobTitle": "Desenvolvedor Angular e Ionic",
+            "url": "https://ricardomedlovalus.com.br/",
+            "email": "mailto:ricardovalus.dev@gmail.com",
+            "image": "https://ricardomedlovalus.com.br/assets/profile.webp",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "ChatSeguro"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Turvo",
+              "addressRegion": "PR",
+              "addressCountry": "BR"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/ricardo-medlo-valus-a35429215",
+              "https://github.com/RicardoValus"
+            ],
+            "knowsAbout": [
+              "Angular",
+              "Ionic",
+              "TypeScript",
+              "Capacitor",
+              "Electron",
+              "PHP",
+              "Firebase"
+            ]
+          }
         ]
       }
     </script>
